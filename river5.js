@@ -1,4 +1,3 @@
-
 /*  The MIT License (MIT)
 	Copyright (c) 2014-2015 Dave Winer
 	
@@ -28,9 +27,7 @@ function readConfig (callback) {
 		var myConfig = new Object ();
 		if (!err) {
 			try {
-				console.log ("readConfig: " + data);
 				myConfig = JSON.parse (data.toString ());
-				console.log ("readConfig: " + JSON.stringify (myConfig, undefined, 4));
 				}
 			catch (err) {
 				console.log ("readConfig: err == " + err.message);
