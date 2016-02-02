@@ -1,0 +1,18 @@
+{
+	"name": "feedTools",
+	"description": "A library of tools for reading RSS, Atom and RDF feeds from Node.js apps.",
+	"author": "Dave Winer <dave@smallpicture.com>",
+	"version": "0.40.0",
+	"dependencies" : {
+		"request": "*",
+		"mime": "*",
+		"MD5": "*",
+		"nodejs-websocket": "*",
+		"opmlparser": "*",
+		"feedparser": "*"
+		}, 
+	"license": "MIT",
+	"engines": {
+		"node": "0.10.*"
+		}
+	}

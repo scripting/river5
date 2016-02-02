@@ -1,0 +1,80 @@
+<html>
+	<head>
+		<title>[%title%]</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="http://fargo.io/code/jquery-1.9.1.min.js"></script><link href="http://fargo.io/code/bootstrap.css" rel="stylesheet"><script src="http://fargo.io/code/bootstrap.min.js"></script><link rel="stylesheet" href="http://fargo.io/code/fontAwesome/css/font-awesome.min.css"/><link href="http://fargo.io/code/ubuntuFont.css" rel="stylesheet" type="text/css"><link href="http://fargo.io/code/ranchoFont.css" rel="stylesheet" type="text/css"><script src="http://fargo.io/code/node/shared/utils.js"></script><script src="http://fargo.io/code/node/shared/alertdialog.js"></script><script src="http://fargo.io/code/node/shared/confirmdialog.js"></script><script src="http://fargo.io/code/node/shared/askdialog.js"></script><script src="http://fargo.io/code/strftime.js"></script><script src="http://fargo.io/code/shared/ga.js"></script><script src="http://fargo.io/code/shared/app.js"></script><script src="http://fargo.io/code/shared/menus.js"></script><link href="http://fargo.io/code/shared/menus.css" rel="stylesheet" type="text/css"><link href="http://fargo.io/code/shared/app.css" rel="stylesheet" type="text/css"><script src="http://fargo.io/code/shared/appprefs.js"></script><script src="http://fargo.io/code/shared/beep.js"></script>
+		<script>
+			function everySecond () {
+				}
+			function startup () {
+				console.log ("startup");
+				self.setInterval (function () {everySecond ()}, 1000); 
+				}
+			</script>
+		<style>
+			body {
+				font-family: Ubuntu;
+				font-size: 18px;
+				background-color: whitesmoke;
+				}
+			.divPageBody {
+				width: 60%;
+				margin-top: 90px;
+				margin-left: auto;
+				margin-right: auto;
+				}
+			.feedTable td {
+				padding: 5px;
+				}
+			.tdFeedTitle {
+				text-align: left;
+				}
+			.tdFeedCt {
+				text-align: right;
+				}
+			.tdFeedDate {
+				text-align: left;
+				}
+			.divFeedTitle {
+				font-size: 32px;
+				font-weight: bold;
+				}
+			.divFeedTitle a {
+				color: black;
+				cursor: pointer;
+				}
+			.divFeedDescription {
+				font-size: 16px;
+				margin-top: 10px;
+				margin-bottom: 10px;
+				}
+			.divFeedUrl {
+				font-size: 16px;
+				margin-top: 10px;
+				margin-bottom: 10px;
+				}
+			.divFeedUrl a {
+				color: black;
+				cursor: pointer;
+				}
+			.divFeedPageTop {
+				margin-bottom: 25px;
+				}
+			.divFeedStatsJson {
+				margin-top: 30px;
+				width: 50%;
+				}
+			</style>
+		</head>
+	<body>
+		<div class="divPageBody">
+			[%text%]
+			</div>
+		<script>
+			$(document).ready (function () {
+				startup ();
+				});
+			</script>
+		</body>
+	</html>
