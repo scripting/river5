@@ -4,21 +4,23 @@
 
 2. Copy into that folder your lists folder from River4, and you want, the data folder.  If you don't copy it, it will be re-created automatically.
 
-3. In that folder, npm install. 
+3. In that folder, <i>npm install</i> 
 
-4. In that folder, node river5.js.
+4. In that folder, <i>node river5.js</i>
 
 Let it run for a while. You should see a JS file created in your rivers sub-folder corresponding to each of your lists. 
 
 #### To view your rivers
 
-Go to http://localhost:1600/.
+Go to <a href="http://localhost:1600/">http://localhost:1600/</a>.
 
 #### Configuring
 
 There's only one way to configure it, via the config.json file.
 
 Look in the source for the config struct. You can override any of those values via the config.json file in your river5 folder.
+
+The example config.json in the folder sets the max number of items in a river to 300.
 
 #### Testing plan
 
