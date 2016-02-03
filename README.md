@@ -26,3 +26,17 @@ The example config.json in the folder sets the max number of items in a river to
 
 For now this is only for the very adventurous developer type user. Unless you're one of the testers I'm working directly with don't ask for support until this message goes away.
 
+#### Updates
+
+##### v0.41 -- 2/3/16 by DW
+
+We now maintain a new data structure for each list, riverData.json, in the same folder as the listInfo.json file.
+
+It contains an array of river items that are part of this river. To build the riverjs file, all we have to do is loop over that array. 
+
+It's kept in memory while River5 is running, so now building a river on reads a file from the disk the first time a river is built or an item is added to it. 
+
+One of the first bennies of rebuilding the river software, it's now quite a bit faster at building rivers, and it's no longer a function of how dense the river is. In previous versions, rivers that don't update often would require us to go back a long ways into the calendar structure to build the river. 
+
+Now the calendar structure is just an archive, it's no longer used to build anything. It could be made optional. 
+
