@@ -1,0 +1,248 @@
+<html>
+	<head>
+		<title>River5 Home</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="http://fargo.io/code/jquery-1.9.1.min.js"></script><link href="http://fargo.io/code/bootstrap.css" rel="stylesheet"><script src="http://fargo.io/code/bootstrap.min.js"></script><link rel="stylesheet" href="http://fargo.io/code/fontAwesome/css/font-awesome.min.css"/><link href="http://fargo.io/code/ubuntuFont.css" rel="stylesheet" type="text/css"><link href="http://fargo.io/code/ranchoFont.css" rel="stylesheet" type="text/css"><script src="http://fargo.io/code/node/shared/utils.js"></script><script src="http://fargo.io/code/node/shared/alertdialog.js"></script><script src="http://fargo.io/code/node/shared/confirmdialog.js"></script><script src="http://fargo.io/code/node/shared/askdialog.js"></script><script src="http://fargo.io/code/strftime.js"></script><script src="http://fargo.io/code/shared/ga.js"></script><script src="http://fargo.io/code/shared/app.js"></script><script src="http://fargo.io/code/shared/menus.js"></script><link href="http://fargo.io/code/shared/menus.css" rel="stylesheet" type="text/css"><link href="http://fargo.io/code/shared/app.css" rel="stylesheet" type="text/css"><script src="http://fargo.io/code/shared/appprefs.js"></script><script src="http://fargo.io/code/shared/beep.js"></script>
+		<script src="http://fargo.io/code/browsers/riverbrowser.js"></script>
+		<script>
+			var appConsts = {
+				productname: "river5Home",
+				productnameForDisplay: "River5 Home",
+				"description": "The home page of the River5 app.",
+				urlTwitterServer: "http://twitter2.radio3.io:5342/",
+				version: "0.40"
+				}
+			var appPrefs = {
+				flServerBasedPrefs: true,
+				ctPrefsSaves: 0,
+				myRivers: {
+					"Dave": "http://rss4.scripting.com/rivers/iowa.js",
+					"NYT": "http://rss4.scripting.com/rivers/nytRiver.js",
+					"Tech": "http://rss4.scripting.com/rivers/tech.js",
+					"World": "http://rss4.scripting.com/rivers/world.js",
+					"Podcasts": "http://rss4.scripting.com/rivers/podcasts.js",
+					"NBA": "http://rss4.scripting.com/rivers/nba.js",
+					"Movies": "http://rss4.scripting.com/rivers/movies.js"
+					},
+				currentPanelName: "",
+				flBackgroundUpdates: false,
+				urlLinkBlogTool: "http://radio3.io/"
+				};
+			var serverConfig = [%config%];
+			var whenLastTabSwitch = new Date (), urlLastRiverGet;
+			
+			
+			//websockets -- 2/1/16 by DW
+				var urlMySocket = "ws://nashville.scripting.com:1601/";
+				var mySocket = undefined;
+				
+				function startWebSocketClient (s) {
+					var splitUrl = urlSplitter (window.location.href), host;
+					var urlSocket = "ws://" + splitUrl.host + ":" + serverConfig.webSocketPort + "/";
+					console.log ("startWebSocketClient: urlSocket == " + urlSocket);
+					
+					mySocket = new WebSocket (urlSocket); 
+					mySocket.onopen = function (evt) {
+						console.log ("mySocket is open.");
+						console.log ("sending: " + s);
+						mySocket.send (s);
+						};
+					mySocket.onmessage = function (evt) {
+						var eventData = evt.data.toString ();
+						var words = eventData.split (" ");
+						if (words.length >= 2) { //new protocol as of 11/29/15 by DW
+							switch (words [0]) {
+								case "updated":
+									var listname = trimWhitespace (words [1]);
+									console.log ("updated " + listname);
+									break;
+								case "readfeed":
+									var urlfeed = trimWhitespace (words [1]);
+									break;
+								case "item":
+									var jsontext = stringDelete (eventData, 1, 5); //pop off "item "
+									console.log ("new item: jsontext == " + jsontext);
+									break;
+								default:
+									console.log (words [0] + words [1]);
+									break;
+								}
+							}
+						
+						};
+					mySocket.onclose = function (evt) {
+						console.log ("mySocket was closed.");
+						mySocket = undefined;
+						};
+					mySocket.onerror = function (evt) {
+						console.log ("mySocket received an error");
+						};
+					}
+			
+			function panelExists (panelname) {
+				panelname = panelname.toLowerCase ();
+				for (var tabname in appPrefs.myRivers) { 
+					if (tabname.toLowerCase () == panelname) {
+						return (true);
+						}
+					}
+				return (false);
+				}
+			function getFirstPanelName () {
+				for (var x in appPrefs.myRivers) { 
+					return (x);
+					}
+				}
+			function buildTabs () { 
+				$("#idTabList").empty ();
+				for (var tabname in appPrefs.myRivers) { 
+					var activetab = "", lowername = tabname.toLowerCase ();
+					
+					if (lowername == appPrefs.currentPanelName) {
+						activetab = " class=\"active\""
+						}
+					
+					var clickScript = "switchPanel (\"" + lowername + "\")";
+					$("#idTabList").append ("<li" + activetab + " id='" + tabname + "'><a data-toggle=\"tab\" onclick='" + clickScript + "'>"  + tabname + "</a></li>");
+					}
+				}
+			function switchPanel (panelname) {
+				var jsonFeed;
+				if (panelname == "null") {
+					if (appPrefs.currentPanelName.length > 0) {
+						panelname = appPrefs.currentPanelName;
+						}
+					else {
+						panelname = getFirstPanelName ();
+						}
+					}
+				panelname = panelname.toLowerCase ();
+				for (var tabname in appPrefs.myRivers) { 
+					if (tabname.toLowerCase () == panelname) {
+						appPrefs.currentPanelName = panelname;
+						jsonFeed = appPrefs.myRivers [tabname];
+						break;
+						}
+					}
+				buildTabs ();
+				httpGetRiver (jsonFeed);
+				whenLastTabSwitch = new Date ();
+				}
+			function capitalizeFirstLetter (s) {
+				return (s.charAt (0).toUpperCase () + s.slice (1));
+				}
+			function everySecond () {
+				if (mySocket === undefined) { //try to open the connection
+					startWebSocketClient ("hello world");
+					}
+				}
+			function startup () {
+				console.log ("startup");
+				$("#idVersionNumber").html ("v" + appConsts.version);
+				twStorageData.urlTwitterServer = appConsts.urlTwitterServer; //4/13/15 by DW
+				initMenus ();
+				hitCounter (); //9/4/14 by DW
+				readHttpFile ("getlistnames", function (jsontext) {
+					if (jsontext !== undefined) {
+						var listnames = JSON.parse (jsontext);
+						appPrefs.myRivers = new Object ();
+						for (var i = 0; i < listnames.length; i++) {
+							var tabLabel = stringPopExtension (listnames [i]);  //turn iowa.opml to iowa
+							var urlRiver = "getoneriver?fname=" + tabLabel + ".js";
+							appPrefs.myRivers [capitalizeFirstLetter (tabLabel)] = urlRiver;
+							}
+						switchPanel (getURLParameter ("panel"));
+						console.log ("startup: appPrefs == " + jsonStringify (appPrefs));
+						self.setInterval (function () {everySecond ()}, 1000); 
+						}
+					});
+				}
+			</script>
+		<style>
+			body {
+				font-family: "Lora";
+				font-size: 18px;
+				background-color: whitesmoke;
+				}
+			.nav-tabs {
+				margin-bottom: -1px;
+				}
+			.nav-tabs>li>a {
+				cursor: pointer;
+				}
+			.divVersionNumber {
+				font-size: 12px;
+				color: #777777;
+				float: right;
+				padding: 19px;
+				}
+			.nav-tabs > .active > a, .nav-tabs > .active > a:hover, .nav-tabs > .active > a:focus {
+				background-color: whitesmoke;
+				}
+			.divRiverContainer {
+				margin-top: 110px;
+				margin-bottom: 500px;
+				}
+			</style>
+			</style>
+		</head>
+	<body>
+		<div class="divMenubar" id="idMenubar">
+			<div class="topbar-wrapper" style="z-index: 5;">
+				<div class="navbar navbar-fixed-top" data-dropdown="dropdown">
+					<div class="divVersionNumber" id="idVersionNumber">
+						</div>
+					<div class="navbar-inner">
+						<div class="container">
+							<a class="brand" href="/"><span id="idMenuProductName"></span></a>
+							<ul class="nav" id="idMainMenuList">
+								<li class="dropdown" id="idDocsMenu"> 
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Stuff&nbsp;<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+										<li><a href="dashboard" target="_blank">Dashboard...</a></li>
+										<li class="divider"></li>
+										<li><a href="https://github.com/scripting/river5" target="_blank">On GitHub...</a></li>
+										<li><a href="http://river4.smallpict.com/" target="_blank">River4 blog...</a></li>
+										<li><a href="https://groups.google.com/forum/?fromgroups#!forum/river4" target="_blank">Mail list...</a></li>
+										<li class="divider"></li>
+										<li><a onclick="aboutDialog ();">About <span id="idMenuAboutProductName"></span>...</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<div class="divRiversBody">
+			<div class="divRiverContainer">
+				<div class="divRiversInTabsPage">
+					<div class="divRiverTabs" id="idTabs" style="visibility: visible;">
+						<ul id="idTabList" class="nav nav-tabs">
+							</ul>
+						</div>
+					<div class="divRiverInTab">
+						<div class="divRiverDisplay" id="idRiverDisplay">
+							</div>
+						</div>
+					</div>
+				</div>
+			<div class="row-fluid">
+				<div class="span2">
+					&nbsp;
+					</div>
+				<div class="span8">
+					</div>
+				<div class="span2">
+					&nbsp;
+					</div>
+				</div>
+			</div>
+		<script>
+			$(document).ready (function () {
+				startup ();
+				});
+			</script>
+		</body>
+	</html>
