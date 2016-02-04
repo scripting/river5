@@ -48,7 +48,7 @@ If you're using the feature that calls JavaScript code when a new item is added 
 
 It's hard to imagine why you would want to change the names of these files that RIver5 generates internally, but you can. Have fun! :-)
 
-##### config.flAddItemsFromNewSubs: false,
+##### config.flAddItemsFromNewSubs: true,
 
 If true, the first time we read a feed we will add the new items. It's false by default because feeds may contain a lot of old items, and reading rivers is all about new stuff. 
 

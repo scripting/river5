@@ -28,6 +28,10 @@ A current Node.js installation.
 
 Let it run for a while. You should see a JS file created in your <i>rivers</i> sub-folder corresponding to each of the files in your lists folder. 
 
+#### How to configure River5
+
+All the configuration settings are explained on this page. 
+
 #### For River4 users
 
 River5 is designed to run your installation, without modifications. 
@@ -65,6 +69,8 @@ For now this is only for the very adventurous developer type user. Unless you're
 #### Other docs
 
 <a href="http://river5.smallpict.com/2016/02/03/whyRiver5.html">The road to River5</a>, reviews  the previous versions of my river-of-news software going back to 1999, with a special focus on the transition from River4 to River5. 
+
+All the configuration settings are explained on this page. 
 
 #### Updates
 
