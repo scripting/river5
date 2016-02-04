@@ -1,12 +1,12 @@
 #### How River5 works
 
-When it starts up, River5 reads the list files in the <i>lists</i> folder at the top level of the River5 folder.
+When it starts up, River5 reads files in the <i>lists</i> folder at the top level of the River5 folder.
 
-Each list contains a set of URLs of feeds. The list files can be straight text, a JSON array of URLs of feeds, or a traditional OPML subscription list. 
+Each list contains a set of URLs of feeds. The list files can be straight text, a JSON array of URLs of feeds, or a traditional OPML subscription list, with extensions .txt, .json and .opml.  River5 ignores files that are not in one of these formats.
 
-The feeds can be in RSS 0.9x, 1.0 or 2.0 format, or Atom 1.0.
+The feeds pointed to from the lists can be in RSS 0.9x, 1.0 or 2.0, or Atom 1.0.
 
-Periodically it reads all the feeds you're subscribed to (it appears in one or more of your lists), and routes new items to corresponding riverjs files in the <i>rivers</i> folder at the top level of the River5 folder. 
+Every 15 minutes, River5 reads all the feeds you're subscribed to, and routes new items to corresponding files in the <i>rivers</i> folder at the top level of the River5 folder. You're subscribed to a feed if it appears in one or more of your lists. The river files are a <a href="http://riverjs.org/">documented</a> form of JSONP that we've been using since River3, in 2010.
 
 To read the output of River5 on the machine it's running on, go to the home page. Assuming your river is running on the default port, 1337, you would go to this address to read the rivers. http://localhost:1337/. If it's running on a public server, just replace localhost with the domain name or IP address of the server. 
 
