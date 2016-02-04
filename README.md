@@ -1,3 +1,7 @@
+#### Docs
+
+<a href="http://river5.smallpict.com/2016/02/03/whyRiver5.html">The road to River5</a>, reviews all the previous versions of my river-of-news software going back to 1999, with a special focus on the transition from River4 to River5. 
+
 #### Quick start for River4 users
 
 1. Download the river5 folder from this repo.
@@ -39,8 +43,4 @@ It's kept in memory while River5 is running, so now building a river on reads a 
 One of the first bennies of rebuilding the river software, it's now quite a bit faster at building rivers, and it's no longer a function of how dense the river is. In previous versions, rivers that don't update often would require us to go back a long ways into the calendar structure to build the river. 
 
 Now the calendar structure is just an archive, it's no longer used to build anything. It could be made optional. 
-
-#### Docs
-
-<a href="http://river5.smallpict.com/2016/02/03/whyRiver5.html">The road to River5</a>, reviews all the previous versions of my river-of-news software going back to 1999, with a special focus on the transition from River4 to River5. 
 
