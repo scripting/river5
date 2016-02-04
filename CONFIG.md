@@ -100,7 +100,7 @@ These values tell River5 to quit when it notices that it's main JavaScript file 
 
 #### config.urlFavicon: "http://rss2.io/code/favicon.ico"
 
-When you access the home page of your server, River5 loads the HTML source for the home page from the address specified by urlServerHomePageSource. If you want to develop a customized home page, and you're a JavaScript programmer, you can change this value. You are welcome to use the example at that address as starter code. 
+When you access the home page of your server, River5 loads the HTML source for the home page from the address specified by urlServerHomePageSource. If you want to develop a customized home page, and you're a JavaScript programmer, you can change this value. You are welcome to use the example at that address as starter code.   
 
 The second address is the HTML source of the dashboard, which is accessible from the home page. The third is the address of the server's favicon. 
 
