@@ -2,23 +2,23 @@ All configuration of River5 is done by adding or changing a value in the config.
 
 The example config.json in the folder sets the max number of items in a river to 300.
 
-##### config.enabled: true,
+**config.enabled: true,**
 
 If false, River5 will stop reading feeds and adding new items to rivers. 
 
-##### config.httpPort: 1337,
+**config.httpPort: 1337,**
 
-##### config.flHttpEnabled: true,
+**config.flHttpEnabled: true,**
 
 River5 has a built-in web server. It's needed for the home page which displays the rivers. If you have another way to view rivers, and want to keep your server from being accessed over the web you can turn this feature off.
 
-##### config.webSocketPort: 1338,
+**config.webSocketPort: 1338,**
 
-##### config.flWebSocketEnabled: true,
+**config.flWebSocketEnabled: true,**
 
 River5 also can send information back to a client using the relatively new WebSockets technology. Right now this is still somewhat experimental, so if you're not using it, you can turn it off. But it's reallly cool, and you might want to try playing with it. ;-)
 
-##### config.dataFolder: "data/",
+**config.dataFolder: "data/",**
 
 ##### config.listsFolder: "lists/",
 
