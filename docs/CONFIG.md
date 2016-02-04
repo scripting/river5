@@ -1,4 +1,4 @@
-#### Configuring River5
+### Configuring River5
 
 All configuration of River5 is done by adding or changing a value in the config.json file in the same directory as river5.js.
 
