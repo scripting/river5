@@ -26,7 +26,11 @@ A current Node.js installation.
 
 4. node river5.js
 
-Let it run for a while. You should see a JS file created in your <i>rivers</i> sub-folder corresponding to each of the files in your lists folder. 
+Let it run for a few minutes, watching the messages scroll by in the console. When you see JS files show up in the rivers</i> folder, one for each of your lists, you'll know that River5 is working. 
+
+#### To view your rivers
+
+Go to <a href="http://localhost:1337/">http://localhost:1337/</a>.
 
 #### How to configure River5
 
@@ -39,10 +43,6 @@ River5 is designed to run your installation, without modifications.
 You can just replace river4.js with river5.js.
 
 It will take a while for your rivers to repopulate because River5 does not use the calendar structure to build rivers. It has a new faster method for building rivers that happens automatically as we read the feeds. The calendar is turned off by default, but you can turn it on, if you've built apps that run off the calendar. 
-
-#### To view your rivers
-
-Go to <a href="http://localhost:1337/">http://localhost:1337/</a>.
 
 #### Configuring
 
