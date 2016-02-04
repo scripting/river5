@@ -1,22 +1,44 @@
-#### Docs
+#### How River5 works
 
-<a href="http://river5.smallpict.com/2016/02/03/whyRiver5.html">The road to River5</a>, reviews all the previous versions of my river-of-news software going back to 1999, with a special focus on the transition from River4 to River5. 
+When it starts up, River5 reads the list files in the <i>lists</i> folder at the top level of the River5 folder.
 
-#### Quick start for River4 users
+Each list contains a set of URLs of feeds. The list files can be straight text, a JSON array of URLs of feeds, or a traditional OPML subscription list. 
 
-1. Download the river5 folder from this repo.
+The feeds can be in RSS 0.9x, 1.0 or 2.0 format, or Atom 1.0.
 
-2. Copy into that folder your lists folder from River4, and if you want, the data folder.  If you don't copy it, it will be re-created automatically.
+Periodically it reads all the feeds you're subscribed to (it appears in one or more of your lists), and routes new items to corresponding riverjs files in the <i>rivers</i> folder at the top level of the River5 folder. 
 
-3. In that folder: <i>npm install</i> 
+To read the output of River5 on the machine it's running on, go to the home page. Assuming your river is running on the default port, 1337, you would go to this address to read the rivers. http://localhost:1337/. If it's running on a public server, just replace localhost with the domain name or IP address of the server. 
 
-4. In that folder: <i>node river5.js</i>
+Pretty much everything in this narrative is configurable. 
 
-Let it run for a while. You should see a JS file created in your rivers sub-folder corresponding to each of the OPML files in your lists folder. 
+#### Requirements
+
+A current Node.js installation. 
+
+#### How to install
+
+1. Download the folder from the repository to your local computer. 
+
+2. From the command line, go to this folder.
+
+3. npm install
+
+4. node river5.js
+
+Let it run for a while. You should see a JS file created in your <i>rivers</i> sub-folder corresponding to each of the files in your lists folder. 
+
+#### For River4 users
+
+River5 is designed to run your installation, without modifications. 
+
+You can just replace river4.js with river5.js.
+
+It will take a while for your rivers to repopulate because River5 does not use the calendar structure to build rivers. It has a new faster method for building rivers that happens automatically as we read the feeds. The calendar is turned off by default, but you can turn it on, if you've built apps that run off the calendar. 
 
 #### To view your rivers
 
-Go to <a href="http://localhost:1600/">http://localhost:1600/</a>.
+Go to <a href="http://localhost:1337/">http://localhost:1337/</a>.
 
 #### Configuring
 
@@ -26,9 +48,23 @@ Look in the source for the config struct. You can override any of those values v
 
 The example config.json in the folder sets the max number of items in a river to 300.
 
+All of the config.json options are listed on this page.
+
+#### Where's the code?
+
+The heart of River5 is in a Node package in the lib folder, called feedtools.js.
+
+This will eventually be offered through the Node.js package distribution system so we can easily include feed functionality in other apps.
+
+For right now, feedtools.js is set up just to work with river5.js. 
+
 #### Testing plan
 
 For now this is only for the very adventurous developer type user. Unless you're one of the testers I'm working directly with don't ask for support until this message goes away.
+
+#### Other docs
+
+<a href="http://river5.smallpict.com/2016/02/03/whyRiver5.html">The road to River5</a>, reviews  the previous versions of my river-of-news software going back to 1999, with a special focus on the transition from River4 to River5. 
 
 #### Updates
 
