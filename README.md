@@ -40,3 +40,7 @@ One of the first bennies of rebuilding the river software, it's now quite a bit 
 
 Now the calendar structure is just an archive, it's no longer used to build anything. It could be made optional. 
 
+#### Docs
+
+<a href="http://river5.smallpict.com/2016/02/03/whyRiver5.html">The road to River5</a>, reviews all the previous versions of my river-of-news software going back to 1999, with a special focus on the transition from River4 to River5. 
+
