@@ -1,8 +1,8 @@
 ### Configuring River5
 
-All configuration of River5 is done by adding or changing a value in the config.json file in the same directory as river5.js.
+All configuration of River5 is done by adding or changing values in the config.json file in the same directory as river5.js.
 
-The example config.json in the folder sets the max number of items in a river to 300.
+The <a href="https://github.com/scripting/river5/blob/master/config.json">example</a> config.json in the folder sets the max number of items in a river to 300.
 
 ##### config.enabled: true,
 
@@ -105,4 +105,20 @@ These values tell River5 to quit when it notices that it's main JavaScript file 
 When you access the home page of your server, River5 loads the HTML source for the home page from the address specified by urlServerHomePageSource. If you want to develop a customized home page, and you're a JavaScript programmer, you can change this value. You are welcome to use the example at that address as starter code.   
 
 The second address is the HTML source of the dashboard, which is accessible from the home page. The third is the address of the server's favicon. 
+
+### Configuring the home page
+
+You can also configure the tabs on the home page, so that only some of the rivers are displayed there and they have titles that you like. You configure that the same way you configure anything in River5, in your config.json file.
+
+##### config.homePage
+
+It's an object that contains a single array, with one element for each panel on your home page.
+
+Each item in the array is an object, that has two values: title and river. 
+
+<i>title</i> is the text you want to appear on the page for that river. It can be longer or shorter than the name of the river file. 
+
+<i>river</i> is the name of the file in the rivers folder you want to be displayed in the panel.
+
+Here's an <a href="https://gist.github.com/scripting/b03106f660111ac7d987">example</a> of the config.json file to help tie it all together. 
 

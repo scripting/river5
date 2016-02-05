@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>River5 Home</title>
+		<title>River5</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script src="http://fargo.io/code/jquery-1.9.1.min.js"></script><link href="http://fargo.io/code/bootstrap.css" rel="stylesheet"><script src="http://fargo.io/code/bootstrap.min.js"></script><link rel="stylesheet" href="http://fargo.io/code/fontAwesome/css/font-awesome.min.css"/><link href="http://fargo.io/code/ubuntuFont.css" rel="stylesheet" type="text/css"><link href="http://fargo.io/code/ranchoFont.css" rel="stylesheet" type="text/css"><script src="http://fargo.io/code/node/shared/utils.js"></script><script src="http://fargo.io/code/node/shared/alertdialog.js"></script><script src="http://fargo.io/code/node/shared/confirmdialog.js"></script><script src="http://fargo.io/code/node/shared/askdialog.js"></script><script src="http://fargo.io/code/strftime.js"></script><script src="http://fargo.io/code/shared/ga.js"></script><script src="http://fargo.io/code/shared/app.js"></script><script src="http://fargo.io/code/shared/menus.js"></script><link href="http://fargo.io/code/shared/menus.css" rel="stylesheet" type="text/css"><link href="http://fargo.io/code/shared/app.css" rel="stylesheet" type="text/css"><script src="http://fargo.io/code/shared/appprefs.js"></script><script src="http://fargo.io/code/shared/beep.js"></script>
@@ -8,7 +8,7 @@
 		<script>
 			var appConsts = {
 				productname: "river5Home",
-				productnameForDisplay: "River5 Home",
+				productnameForDisplay: "River5",
 				"description": "The home page of the River5 app.",
 				urlTwitterServer: "http://twitter2.radio3.io:5342/",
 				version: "[%version%]"
@@ -109,6 +109,7 @@
 				}
 			function switchPanel (panelname) {
 				var jsonFeed;
+				console.log ("switchPanel: panelname == " + panelname);
 				if (panelname == "null") {
 					if (appPrefs.currentPanelName.length > 0) {
 						panelname = appPrefs.currentPanelName;
@@ -125,7 +126,15 @@
 						break;
 						}
 					}
+				if (jsonFeed === undefined) { //defensive driving -- use the first panel -- 2/5/16 by DW
+					for (var x in appPrefs.myRivers) {
+						jsonFeed = appPrefs.myRivers [x];
+						appPrefs.currentPanelName = x.toLowerCase ();
+						break;
+						}
+					}
 				buildTabs ();
+				console.log ("switchPanel: jsonFeed == " + jsonFeed);
 				httpGetRiver (jsonFeed);
 				whenLastTabSwitch = new Date ();
 				}
@@ -138,24 +147,47 @@
 					}
 				}
 			function startup () {
+				function setupPanels (callback) {
+					console.log ("setupPanels: serverConfig == " + jsonStringify (serverConfig));
+					if ((serverConfig.homePage !== undefined) && (serverConfig.homePage.panels !== undefined)) { 
+						appPrefs.myRivers = new Object ();
+						console.log ("setupPanels: getting panel names from serverConfig.homePage.");
+						for (var i = 0; i < serverConfig.homePage.panels.length; i++) {
+							var item = serverConfig.homePage.panels [i];
+							var urlRiver = "getoneriver?fname=" + item.river;
+							appPrefs.myRivers [item.title] = urlRiver;
+							console.log ("setupPanels: " + item.title + " == " + urlRiver);
+							}
+						if (callback !== undefined) {
+							callback ();
+							}
+						}
+					else {
+						readHttpFile ("getlistnames", function (jsontext) { //fallback to getting panel list from server
+							if (jsontext !== undefined) {
+								var listnames = JSON.parse (jsontext);
+								appPrefs.myRivers = new Object ();
+								for (var i = 0; i < listnames.length; i++) {
+									var tabLabel = stringPopExtension (listnames [i]);  //turn iowa.opml to iowa
+									var urlRiver = "getoneriver?fname=" + tabLabel + ".js";
+									appPrefs.myRivers [capitalizeFirstLetter (tabLabel)] = urlRiver;
+									}
+								if (callback !== undefined) {
+									callback ();
+									}
+								}
+							});
+						}
+					}
 				console.log ("startup");
 				$("#idVersionNumber").html ("v" + appConsts.version);
 				twStorageData.urlTwitterServer = appConsts.urlTwitterServer; //4/13/15 by DW
 				initMenus ();
 				hitCounter (); //9/4/14 by DW
-				readHttpFile ("getlistnames", function (jsontext) {
-					if (jsontext !== undefined) {
-						var listnames = JSON.parse (jsontext);
-						appPrefs.myRivers = new Object ();
-						for (var i = 0; i < listnames.length; i++) {
-							var tabLabel = stringPopExtension (listnames [i]);  //turn iowa.opml to iowa
-							var urlRiver = "getoneriver?fname=" + tabLabel + ".js";
-							appPrefs.myRivers [capitalizeFirstLetter (tabLabel)] = urlRiver;
-							}
-						switchPanel (getURLParameter ("panel"));
-						console.log ("startup: appPrefs == " + jsonStringify (appPrefs));
-						self.setInterval (function () {everySecond ()}, 1000); 
-						}
+				setupPanels (function () {
+					console.log ("startup: appPrefs == " + jsonStringify (appPrefs));
+					switchPanel (getURLParameter ("panel"));
+					self.setInterval (everySecond, 1000); 
 					});
 				}
 			</script>
@@ -203,7 +235,9 @@
 										<li><a href="dashboard" target="_blank">Dashboard...</a></li>
 										<li class="divider"></li>
 										<li><a href="https://github.com/scripting/river5" target="_blank">On GitHub...</a></li>
-										<li><a href="http://river4.smallpict.com/" target="_blank">River4 blog...</a></li>
+										<li><a href="https://github.com/scripting/river5/blob/master/docs/CONFIG.md" target="_blank">Configuring River5...</a></li>
+										<li><a href="https://github.com/scripting/river5/blob/master/docs/ROADTORIVER5.md" target="_blank">Road to River5...</a></li>
+										<li class="divider"></li>
 										<li><a href="https://groups.google.com/forum/?fromgroups#!forum/river4" target="_blank">Mail list...</a></li>
 										<li class="divider"></li>
 										<li><a onclick="aboutDialog ();">About <span id="idMenuAboutProductName"></span>...</a></li>

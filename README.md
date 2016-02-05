@@ -74,6 +74,14 @@ All the configuration settings are explained on <a href="https://github.com/scri
 
 #### Updates
 
+##### v0.43 -- 2/4/16 by DW
+
+You can now configure the panels on the server's home page. 
+
+You get there by going to <a href="http://localhost:1337/">http://localhost:1337/</a> on the machine the server is running on. 
+
+The new configuration feature is documented on the configuration page.
+
 ##### v0.42 -- 2/4/16 by DW
 
 We accept two new formats for files in the lists folder -- straight text and JSON, in addition to the traditional OPML subscription lists.
