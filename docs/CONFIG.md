@@ -108,7 +108,7 @@ The second address is the HTML source of the dashboard, which is accessible from
 
 ### Configuring the home page
 
-You can also configure the tabs on the home page, so that only some of the rivers are displayed there and they have titles that you like. You configure that the same way you configure anything in River5, in your config.json file.
+You can  configure the tabs on the home page, so that only some of the rivers are displayed, and they have titles that you like. You configure the panels the same way you configure anything in River5, in config.json.
 
 ##### config.homePage
 
@@ -119,6 +119,8 @@ Each item in the array is an object, that has two values: title and river.
 <i>title</i> is the text you want to appear on the page for that river. It can be longer or shorter than the name of the river file. 
 
 <i>river</i> is the name of the file in the rivers folder you want to be displayed in the panel.
+
+You get to the home page by going to <a href="http://localhost:1337/">http://localhost:1337/</a> on the machine the server is running on. 
 
 Here's an <a href="https://gist.github.com/scripting/b03106f660111ac7d987">example</a> of the config.json file to help tie it all together. 
 

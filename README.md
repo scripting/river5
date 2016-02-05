@@ -78,8 +78,6 @@ All the configuration settings are explained on <a href="https://github.com/scri
 
 You can now configure the panels on the server's home page. 
 
-You get there by going to <a href="http://localhost:1337/">http://localhost:1337/</a> on the machine the server is running on. 
-
 The new configuration feature is documented in a <a href="https://github.com/scripting/river5/blob/master/docs/CONFIG.md#configuring-the-home-page">new section</a> on the configuration page.
 
 ##### v0.42 -- 2/4/16 by DW
