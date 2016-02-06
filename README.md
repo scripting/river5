@@ -1,3 +1,7 @@
+#### River5
+
+River5 is a JavaScript river-of-news aggregator running in Node.js
+
 #### How River5 works
 
 When it starts up, River5 reads files in the <i>lists</i> folder at the top level of the River5 folder.
