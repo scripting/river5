@@ -42,9 +42,13 @@ Let it run for a few minutes, watching the messages scroll by in the console. Wh
 
 Go to <a href="http://localhost:1337/">http://localhost:1337/</a>.
 
-#### How to configure River5
+#### Configuring
 
-All the configuration settings are explained on <a href="https://github.com/scripting/river5/blob/master/docs/CONFIG.md">this page</a>. 
+There's only one way to configure it, via the config.json file in the same folder as the river5.js app.
+
+The example config.json in the folder sets the max number of items in a river to 300.
+
+All of the config.json options and their default values are listed on <a href="https://github.com/scripting/river5/blob/master/docs/CONFIG.md">this page</a>.
 
 #### For River4 users
 
@@ -54,21 +58,11 @@ You can just replace river4.js with river5.js.
 
 It will take a while for your rivers to repopulate because River5 does not use the calendar structure to build rivers. It has a new faster method for building rivers that happens automatically as we read the feeds. The calendar is turned off by default, but you can turn it on, if you've built apps that run off the calendar. 
 
-#### Configuring
-
-There's only one way to configure it, via the config.json file.
-
-Look in the source for the config struct. You can override any of those values via the config.json file in your river5 folder.
-
-The example config.json in the folder sets the max number of items in a river to 300.
-
-All of the config.json options are listed on this page.
-
 #### Where's the code?
 
-The heart of River5 is in a Node package in the lib folder, called feedtools.js.
+The heart of River5 is in a Node package in the lib folder, called <a href="https://github.com/scripting/river5/blob/master/lib/feedtools.js">feedtools.js</a>.
 
-This will eventually be offered through the Node.js package distribution system so we can easily include feed functionality in other apps.
+The plan is to eventually offer it through the Node.js package distribution system so we can easily include feed functionality in other apps.
 
 For right now, feedtools.js is set up just to work with river5.js. 
 
