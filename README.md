@@ -6,11 +6,11 @@ River5 is a river-of-news RSS aggregator in JavaScript running in Node
 
 When it starts up, River5 reads files in the <i>lists</i> folder at the top level of the River5 folder.
 
-Each list contains a set of URLs of feeds. The list files can be straight text, a JSON array of URLs of feeds, or a traditional OPML subscription list, with extensions .txt, .json and .opml.  River5 ignores files that are not in one of these formats.
+Each list contains a set of URLs of feeds. The list files can be straight text, a JSON array of URLs of feeds, or a traditional <a href="http://dev.opml.org/spec2.html#subscriptionLists">OPML</a> subscription list, with extensions .txt, .json and .opml.  River5 ignores files in the lists folder that are not in one of these formats.
 
 The feeds pointed to from the lists can be in RSS 0.9x, 1.0 or 2.0, or Atom 1.0.
 
-Every 15 minutes, River5 reads all the feeds you're subscribed to, and routes new items to corresponding files in the <i>rivers</i> folder at the top level of the River5 folder. You're subscribed to a feed if it appears in one or more of your lists. The river files are a <a href="http://riverjs.org/">documented</a> form of JSONP that we've been using since River3, in 2010.
+Every 15 minutes, River5 reads all the feeds you're subscribed to, and routes new items to corresponding files in the <i>rivers</i> folder at the top level of the River5 folder. You're subscribed to a feed if it appears in one or more of your lists. The river files are a <a href="http://riverjs.org/">documented</a> form of JSONP that we've been using since <a href="http://river3.opml.org/">River3</a>, in 2010.
 
 To read the output of River5 on the machine it's running on, go to the home page. Assuming your river is running on the default port, 1337, you would go to this address to read the rivers. http://localhost:1337/. If it's running on a public server, just replace localhost with the domain name or IP address of the server. 
 
@@ -20,6 +20,10 @@ Pretty much everything in this narrative is configurable.
 
 A current Node.js installation. 
 
+The machine running River5 does not need to be accessible over the Internet, but it must have an Internet connection for reading feeds.
+
+If you want to use <a href="https://github.com/andrewshell/rsscloud-server">rssCloud</a> notification, it does have to be accessible over the Internet. 
+
 #### How to install
 
 1. Download the folder from the repository to your local computer. 
@@ -28,9 +32,11 @@ A current Node.js installation.
 
 3. npm install
 
-4. node river5.js
+4. Make sure there is at least one file in the <i>lists</i> folder containing URLs of feeds for River5 to follow. I like to use this list of <a href="http://rss2.io/code/feedtools/misc/nytriver.opml">NYT feeds</a> for testing. The Hacker News firehose feed in <a href="http://rss2.io/code/feedtools/misc/hackernews.opml">this list</a> updates frequently so it's good for testing too.
 
-Let it run for a few minutes, watching the messages scroll by in the console. When you see JS files show up in the rivers</i> folder, one for each of your lists, you'll know that River5 is working. 
+5. node river5.js
+
+Let it run for a few minutes, watching the messages scroll by in the console. When you see .js files show up in the rivers folder, one for each of your lists, you'll know that River5 is working. 
 
 #### To view your rivers
 
