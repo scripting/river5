@@ -20,9 +20,9 @@ Pretty much everything in this narrative is configurable.
 
 A current Node.js installation. 
 
-The machine running River5 does not need to be accessible over the Internet, but it must have an Internet connection for reading feeds.
+The machine running River5 ahould be accessible over the Internet.
 
-If you want to use <a href="https://github.com/andrewshell/rsscloud-server">rssCloud</a> notification, it does have to be accessible over the Internet. 
+It is possible to run the software in a limited form on a non-public machine. Of course, you won't be able to access the home page remotely, or receive realtime notifications of feed updates. You'll also have to find a way to upload the output files in the rivers folder to a place where they can be accessed.
 
 #### How to install
 
