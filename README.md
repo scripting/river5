@@ -32,11 +32,23 @@ It is possible to run the software in a limited form on a non-public machine. Of
 
 3. npm install
 
-4. Make sure there is at least one file in the <i>lists</i> folder containing URLs of feeds for River5 to follow. I like to use this list of <a href="http://rss2.io/code/feedtools/misc/nytriver.opml">NYT feeds</a> for testing. The Hacker News firehose feed in <a href="http://rss2.io/code/feedtools/misc/hackernews.opml">this list</a> updates frequently so it's good for testing too.
-
-5. node river5.js
+4. node river5.js
 
 Let it run for a few minutes, watching the messages scroll by in the console. When you see .js files show up in the rivers folder, one for each of your lists, you'll know that River5 is working. 
+
+#### Examples
+
+I have included several files in the <i>lists</i> folder to help you get started, so something actually happens the first time you run River5. You can edit, consolidate or delete them, as you wish. 
+
+1. myJsonFeeds.json -- a list of URLs of feeds in the JSON format that River5 understands. 
+
+2. myOpmlFeeds.json -- a list of URLs of feeds in the standard OPML format for subscription lists.
+
+3. myTxtFeeds.txt -- a list of URLS in a text file.
+
+4. nyt.opml -- a list of a New York Times news feeds.
+
+5. hn.opml -- a list with just one feed in it, the Hacker News firehose. It's a good list for testing RIver5 because it updates so frequently.
 
 #### To view your rivers
 
@@ -62,9 +74,7 @@ It will take a while for your rivers to repopulate because River5 does not use t
 
 The heart of River5 is in a Node package in the lib folder, called <a href="https://github.com/scripting/river5/blob/master/lib/feedtools.js">feedtools.js</a>.
 
-The plan is to eventually offer it through the Node.js package distribution system so we can easily include feed functionality in other apps.
-
-For right now, feedtools.js is set up just to work with river5.js. 
+The plan is to eventually offer it through the Node.js package distribution system so we can easily include feed functionality in other apps. For right now, feedtools.js is set up just to work with river5.js. 
 
 #### Testing plan
 
@@ -73,8 +83,6 @@ For now this is only for the very adventurous developer type user. Unless you're
 #### Other docs
 
 <a href="https://github.com/scripting/river5/blob/master/docs/ROADTORIVER5.md">The road to River5</a>, reviews  the previous versions of my river-of-news software going back to 1999, with a special focus on the transition from River4 to River5. 
-
-All the configuration settings are explained on <a href="https://github.com/scripting/river5/blob/master/docs/CONFIG.md">this page</a>. 
 
 #### Updates
 
@@ -105,4 +113,8 @@ It's kept in memory while River5 is running, so now building a river on reads a 
 One of the first bennies of rebuilding the river software, it's now quite a bit faster at building rivers, and it's no longer a function of how dense the river is. In previous versions, rivers that don't update often would require us to go back a long ways into the calendar structure to build the river. 
 
 Now the calendar structure is just an archive, it's no longer used to build anything. It could be made optional. 
+
+#### Questions, comments?
+
+Please post a note on the <a href="https://groups.google.com/forum/?fromgroups#!forum/river5">River5</a> mail list. 
 
