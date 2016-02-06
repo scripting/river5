@@ -40,15 +40,15 @@ Let it run for a few minutes, watching the messages scroll by in the console. Wh
 
 I have included several files in the <i>lists</i> folder to help you get started, so something actually happens the first time you run River5. You can edit, consolidate or delete them, as you wish. 
 
-1. myJsonFeeds.json -- a list of URLs of feeds in the JSON format that River5 understands. 
+1. <a href="https://github.com/scripting/river5/blob/master/lists/myJsonFeeds.json">myJsonFeeds.json</a> -- a list of URLs of feeds in the JSON format that River5 understands. 
 
-2. myOpmlFeeds.json -- a list of URLs of feeds in the standard OPML format for subscription lists.
+2. <a href="https://github.com/scripting/river5/blob/master/lists/myOpmlFeeds.opml">myOpmlFeeds.json</a> -- a list of URLs of feeds in the standard OPML format for subscription lists.
 
-3. myTxtFeeds.txt -- a list of URLS in a text file.
+3. <a href="https://github.com/scripting/river5/blob/master/lists/myTxtFeeds.txt">myTxtFeeds.txt</a> -- a list of URLS in a text file.
 
-4. nyt.opml -- a list of a New York Times news feeds.
+4. <a href="https://github.com/scripting/river5/blob/master/lists/nyt.opml">nyt.opml</a> -- a list of a New York Times news feeds.
 
-5. hn.opml -- a list with just one feed in it, the Hacker News firehose. It's a good list for testing RIver5 because it updates so frequently.
+5. <a href="https://github.com/scripting/river5/blob/master/lists/hn.opml">hn.opml</a> -- a list with just one feed in it, the Hacker News firehose. It's a good list for testing RIver5 because it updates so frequently.
 
 #### To view your rivers
 
