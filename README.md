@@ -34,7 +34,9 @@ It is possible to run the software in a limited form on a non-public machine. Of
 
 4. node river5.js
 
-Let it run for a few minutes, watching the messages scroll by in the console. When you see .js files show up in the rivers folder, one for each of your lists, you'll know that River5 is working. 
+If it's working properly, you should see tons of stories scroll by in the console. River5 is reading each of the feeds in the lists for the first time. When you see things settle down, then you should open the home page of the RIver5 website, at http://localhost:1337/ and see the result of the first feed readings.
+
+At first there will be a lot of old stories, but as the rivers run for hours and days and into weeks, you'll get the flow. It's a good way to read news.
 
 #### Examples
 
@@ -64,11 +66,15 @@ All of the config.json options and their default values are listed on <a href="h
 
 #### For River4 users
 
-River5 is designed to run your installation, without modifications. 
+River5 does not support S3 storage, so if that's how you're running your rivers, you should continue to use <a href="https://github.com/scripting/river4">River4</a>.
 
-You can just replace river4.js with river5.js.
+1. If you're running out of the filesystem, then River5 can replace River4. 
 
-It will take a while for your rivers to repopulate because River5 does not use the calendar structure to build rivers. It has a new faster method for building rivers that happens automatically as we read the feeds. The calendar is turned off by default, but you can turn it on, if you've built apps that run off the calendar. 
+2. Follow the installation instructions <a href="#how-to-install">above</a>, and before you launch river5.js, remove the files from the lists folder, and replace them with the lists from your River4 installation.
+
+3. It will take a while before your rivers re-populate, so I recommend doing it in parallel with your existing River4 install.
+
+You may want to review the Configuration settings page, there are options for setting new things, and in some cases the defaults have changed. 
 
 #### Where's the code?
 
