@@ -4,9 +4,9 @@ This is an experiment.
 
 Back when I was a student there was a class called Computer Science for Poets.
 
-The idea was that even if you were an English major, programming can make sense, we just have to be careful to define our terms and explain everything. I liked the idea then and still like it now. 
+The idea was that even if you were an English major, programming can make sense, we just have to be careful to define our terms and explain things carefully. I liked the idea then and still like it now. 
 
-So I've written a bunch of poets tutorials for things. And here's another!
+So I've written a bunch of <a href="https://www.google.com/search?q="dave+winer"+poets">poets tutorials</a> for things. And here's another!
 
 #### What is River5?
 
