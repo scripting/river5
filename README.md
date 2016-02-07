@@ -86,13 +86,13 @@ The plan is to eventually offer it through the Node.js package distribution syst
 
 #### Examples of working rivers
 
-<a href="http://podcatch.com/">Podcatch.com</a> subscribes to my friends' podcast feeds.
+1. <a href="http://podcatch.com/">Podcatch.com</a> subscribes to my friends' podcast feeds.
 
-<a href="http://mlbriver.com/">mlbriver.com</a> and <a href="http://nbariver.com/">nbariver.com</a> collect news for two sports I love.
+2. <a href="http://mlbriver.com/">mlbriver.com</a> and <a href="http://nbariver.com/">nbariver.com</a> collect news for two sports I love.
 
-I have a <a href="http://scripting.com/?panel=river">River panel</a> on the Scripting News home page. 
+3. I have a <a href="http://scripting.com/?panel=river">River panel</a> on the Scripting News home page. 
 
-My <a href="http://radio3.io/rivers/">rivers page</a> puts all the news I care about on a single tabbed page, with panels for the NYT, Washington Post, Guardian, Movies, Tech, baseball and basketball.
+4. My <a href="http://radio3.io/rivers/">rivers page</a> puts all the news I care about on a single tabbed page, with panels for the NYT, Washington Post, Guardian, Movies, Tech, baseball and basketball.
 
 #### Other docs
 
