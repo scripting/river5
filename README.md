@@ -98,8 +98,6 @@ The plan is to eventually offer it through the Node.js package distribution syst
 
 <a href="https://github.com/scripting/river5/blob/master/docs/ROADTORIVER5.md">The road to River5</a>, reviews  the previous versions of my river-of-news software going back to 1999, with a special focus on the transition from River4 to River5. 
 
-If you do
-
 #### Updates
 
 ##### v0.43 -- 2/4/16 by DW
