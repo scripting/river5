@@ -24,6 +24,8 @@ The machine running River5 ahould be accessible over the Internet.
 
 It is possible to run the software in a limited form on a non-public machine. Of course, you won't be able to access the home page remotely, or receive realtime notifications of feed updates. You'll also have to find a way to upload the output files in the rivers folder to a place where they can be accessed.
 
+If you don't have Node.js installed on your machine, here are step by step <a href="https://github.com/scripting/river5/blob/master/docs/FORPOETS.md">instructions</a> for installing Node.js on a Macintosh. 
+
 #### How to install
 
 1. Download the folder from the repository to your local computer. 
@@ -89,6 +91,8 @@ For now this is only for the very adventurous developer type user. Unless you're
 #### Other docs
 
 <a href="https://github.com/scripting/river5/blob/master/docs/ROADTORIVER5.md">The road to River5</a>, reviews  the previous versions of my river-of-news software going back to 1999, with a special focus on the transition from River4 to River5. 
+
+If you do
 
 #### Updates
 
