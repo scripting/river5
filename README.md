@@ -6,7 +6,7 @@ River5 is a river-of-news RSS aggregator in JavaScript running in Node
 
 When it starts up, River5 reads files in the <i>lists</i> folder at the top level of the River5 folder.
 
-Each list contains a set of URLs of feeds. The list files can be straight text, a JSON array of URLs of feeds, or a traditional <a href="http://dev.opml.org/spec2.html#subscriptionLists">OPML</a> subscription list, with extensions .txt, .json and .opml.  River5 ignores files in the lists folder that are not in one of these formats.
+Each list contains a set of URLs of feeds. The list files can be straight <a href="https://github.com/scripting/river5/blob/master/lists/myTxtFeeds.txt">text</a>, a <a href="https://github.com/scripting/river5/blob/master/lists/myJsonFeeds.json">JSON</a> array of URLs of feeds, or a traditional <a href="https://github.com/scripting/river5/blob/master/lists/myOpmlFeeds.opml">OPML</a> subscription list, with extensions .txt, .json and .opml.  River5 ignores files in the lists folder that are not in one of these formats. 
 
 The feeds pointed to from the lists can be in RSS 0.9x, 1.0 or 2.0, or Atom 1.0.
 
@@ -46,7 +46,7 @@ I have included several files in the <i>lists</i> folder to help you get started
 
 1. <a href="https://github.com/scripting/river5/blob/master/lists/myJsonFeeds.json">myJsonFeeds.json</a> -- a list of URLs of feeds in the JSON format that River5 understands. 
 
-2. <a href="https://github.com/scripting/river5/blob/master/lists/myOpmlFeeds.opml">myOpmlFeeds.json</a> -- a list of URLs of feeds in the standard OPML format for subscription lists.
+2. <a href="https://github.com/scripting/river5/blob/master/lists/myOpmlFeeds.opml">myOpmlFeeds.json</a> -- a list of URLs of feeds in the standard OPML <a href="http://dev.opml.org/spec2.html#subscriptionLists">format</a> for subscription lists.
 
 3. <a href="https://github.com/scripting/river5/blob/master/lists/myTxtFeeds.txt">myTxtFeeds.txt</a> -- a list of URLS in a text file.
 
