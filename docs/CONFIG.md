@@ -114,7 +114,7 @@ You can  configure the tabs on the home page, so that only some of the rivers ar
 
 It's an object that contains a single array, with one element for each panel on your home page.
 
-Each item in the array is an object, that has two values: title and river. 
+Each item in the array is an object, that has two values: <i>title</i> and <i>river</i>. 
 
 <i>title</i> is the text you want to appear on the page for that river. It can be longer or shorter than the name of the river file. 
 
