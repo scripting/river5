@@ -40,7 +40,7 @@ If it's working properly, you should see tons of stories scroll by in the consol
 
 At first there will be a lot of old stories, but as the rivers run for hours and days and into weeks, you'll get the flow. It's a good way to read news.
 
-#### Examples
+#### Examples of lists
 
 I have included several files in the <i>lists</i> folder to help you get started, so something actually happens the first time you run River5. You can edit, consolidate or delete them, as you wish. 
 
@@ -84,9 +84,15 @@ The heart of River5 is in a Node package in the lib folder, called <a href="http
 
 The plan is to eventually offer it through the Node.js package distribution system so we can easily include feed functionality in other apps. For right now, feedtools.js is set up just to work with river5.js. 
 
-#### Testing plan
+#### Examples of working rivers
 
-For now this is only for the very adventurous developer type user. Unless you're one of the testers I'm working directly with don't ask for support until this message goes away.
+<a href="http://podcatch.com/">Podcatch.com</a> subscribes to my friends' podcast feeds.
+
+<a href="http://mlbriver.com/">mlbriver.com</a> and <a href="http://nbariver.com/">nbariver.com</a> collect news for two sports I love.
+
+I have a <a href="http://scripting.com/?panel=river">River panel</a> on the Scripting News home page. 
+
+My <a href="http://radio3.io/rivers/">rivers page</a> puts all the news I care about on a single tabbed page, with panels for the NYT, Washington Post, Guardian, Movies, Tech, baseball and basketball.
 
 #### Other docs
 
