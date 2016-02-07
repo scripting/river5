@@ -26,7 +26,7 @@ I'm assuming you're using a Mac though the instructions for Windows and Unix are
 
 3. Rename it to river5, and move it somewhere safe, the desktop, or some other folder. 
 
-4. Open the Terminal app, in the Applications folder. You should see a black icon in the Dock. Drag the river5 folder icon onto the black icon in the Doc. It should open in its own window.
+4. Open the Terminal app, in the Applications folder. You should see a black icon in the Dock. Drag the river5 folder icon onto the black icon in the Dock. It should open in its own window.
 
 5. BTW, you're now directly accessing the Unix operating system through something called the command line. 
 
@@ -34,13 +34,13 @@ I'm assuming you're using a Mac though the instructions for Windows and Unix are
 
 7. When you do this the computer is going to ask for your system password. This is because you're doing something that requires access to the secure part of the system. 
 
-9. sudo apt-get install nodejs
+9. <i>sudo apt-get install nodejs</i>
 
-10. sudo apt-get install npm
+10. <i>sudo apt-get install npm</i>
 
-11. sudo apt-get install nodejs-legacy
+11. <i>sudo apt-get install nodejs-legacy</i>
 
-12. Congratulations you just installed Node.js. Now you're ready to run River5. To do that, enter this command: node river5.js
+12. Congratulations you just installed Node.js. Now you're ready to run River5. Enter this command: <i>node river5.js</i>
 
 That's it! It should be doing its thing now, and you can follow the remaining instructions on the home page of the River5 site.
 
