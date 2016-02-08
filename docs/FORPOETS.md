@@ -30,7 +30,9 @@ I'm assuming you're using a Mac though the instructions for Windows and Unix are
 
 6. Go to <a href="https://nodejs.org/">nodejs.org</a>, and download the <a href="http://scripting.com/2016/02/08/nodeMature.png">Mature and Dependable</a> release. When the file downloads, open it, and say yes to all the confirmation prompts.
 
-7. Now you're ready to run River5. Enter this command in the Terminal app: <i>node river5.js</i>
+7. Now, with Node installed and the River5 folder open in the Terminal app, type this command, followed by Return: <i>npm install</i>
+
+8. Now you're ready to run River5. Enter this command in the Terminal app: <i>node river5.js</i>
 
 That's it! River5 should be doing its thing now, and you can follow the remaining instructions on the <a href="https://github.com/scripting/river5">home page</a> of this site.
 
