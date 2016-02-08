@@ -1,6 +1,6 @@
 ### Configuring River5
 
-All configuration of River5 is done by adding or changing values in the config.json file in the same directory as river5.js.
+All configuration of River5 is done by adding or changing values in <i>config.json</i> in the same directory as river5.js.
 
 The <a href="https://github.com/scripting/river5/blob/master/config.json">example</a> config.json in the folder sets the max number of items in a river to 300.
 
@@ -50,7 +50,7 @@ It's hard to imagine why you would want to change the names of these files that 
 
 ##### config.flAddItemsFromNewSubs: true,
 
-If true, the first time we read a feed we will add the new items. It's false by default because feeds may contain a lot of old items, and reading rivers is all about new stuff. 
+If true, the first time we read a feed we will add the new items. You may want to set it false because feeds may contain a lot of old items, and reading rivers is all about new stuff. It defaults to true because we want new users to see something in their rivers when they start up the first few times.
 
 ##### config.maxRiverItems: 250,
 
@@ -58,7 +58,7 @@ The maximum number of items in a river. The bigger it is the longer it takes to 
 
 ##### config.maxBodyLength: 280,
 
-We truncate the &lt;description> elements of feed items to this size. I chose 280 as the default as a result of a test we did to determine the max length of a story synopsis in the NYT feeds. We figured they put a lot of time into deciding how long to make these. Pretty much all of them would fit in 280 characters. It's also twice the current limit of tweets. This value feels good, at least to me. ;-)
+We truncate the &lt;description> elements of feed items to this size. I chose 280 as the default as a result of a test we did to determine the max length of a story synopsis in the NYT feeds. We figured they put a lot of time into deciding how long to make these. Pretty much all of them would fit in 280 characters. It's also twice the current limit of tweets. This value <a href="http://scripting.com/stories/2009/06/23/if140IsTooLittleWhatsTheRi.html">feels good</a>, at least to me. ;-)
 
 ##### config.flSkipDuplicateTitles: true,
 
@@ -88,13 +88,13 @@ There's a limit to how many concurrent file writes a Node app can do. It varies 
 
 ##### config.remotePassword: "",
 
-People who use river4.io to manage their server will need to set this to a non-empty value. We may at some time produce an equivalent app just for River5. 
+People who use <a href="http://river4.io/">river4.io</a> to manage their server will need to set this to a non-empty value. We may at some time produce an equivalent app just for River5. 
 
 ##### config.flWatchAppDateChange: false,
 
 ##### config.fnameApp: "lib/feedtools.js",
 
-These values tell River5 to quit when it notices that it's main JavaScript file has changed. This is useful for me as the developer, but it's hard to imagine who else it might be useful to. 
+These values tell River5 to quit when it notices that its main JavaScript file has changed. This is useful for me as the developer, but it's hard to imagine who else it might be useful to. 
 
 ##### config.urlServerHomePageSource: "http://rss2.io/code/feedtools/misc/serverhomepage.html", 
 

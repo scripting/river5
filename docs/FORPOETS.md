@@ -8,7 +8,7 @@ So I've written a bunch of <a href="https://www.google.com/search?q="dave+winer"
 
 #### What is River5?
 
-It's a piece of software that reads lots of RSS feeds and combines their "flows" into a single river that you can then scan to find out what's new. If you were familiar with teletypes, that's kind of what they are like. You just read until you see something you've seen before and then go back to what you were doing. Facebook and Twitter are rivers, btw. We've been doing our rivers since before they existed! 
+It's a piece of software that reads lots of RSS feeds and combines their "flows" into a single river that you can then scan to find out what's new. If you were familiar with <a href="https://en.wikipedia.org/wiki/Teleprinter">teletypes</a>, that's kind of what they are like. You just read until you see something you've seen before and then go back to what you were doing. Facebook and Twitter are rivers, btw. We've been doing our rivers since before they existed! 
 
 #### What you need
 
@@ -28,17 +28,9 @@ I'm assuming you're using a Mac though the instructions for Windows and Unix are
 
 5. BTW, you're now directly accessing the Unix operating system through something called the command line. 
 
-6. Now you're going to type four commands. The first one is: <i>sudo apt-get update</i>
+6. Go to nodejs.org, and download the <a href="http://scripting.com/2016/02/08/nodeMature.png">Mature and Dependable</a> release. When the file downloads, double-click on it, and say yes to all the confirmation prompts.
 
-7. When you do this the computer is going to ask for your system password. This is because you're doing something that requires access to the secure part of the system. 
-
-9. <i>sudo apt-get install nodejs</i>
-
-10. <i>sudo apt-get install npm</i>
-
-11. <i>sudo apt-get install nodejs-legacy</i>
-
-12. Congratulations you just installed Node.js. Now you're ready to run River5. Enter this command: <i>node river5.js</i>
+7.Now you're ready to run River5. Enter this command: <i>node river5.js</i>
 
 That's it! It should be doing its thing now, and you can follow the remaining instructions on the home page of the River5 site.
 
