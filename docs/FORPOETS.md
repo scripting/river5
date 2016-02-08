@@ -28,9 +28,9 @@ I'm assuming you're using a Mac though the instructions for Windows and Unix are
 
 5. BTW, you're now directly accessing the Unix operating system through something called the command line. 
 
-6. Go to nodejs.org, and download the <a href="http://scripting.com/2016/02/08/nodeMature.png">Mature and Dependable</a> release. When the file downloads, double-click on it, and say yes to all the confirmation prompts.
+6. Go to <a href="https://nodejs.org/">nodejs.org</a>, and download the <a href="http://scripting.com/2016/02/08/nodeMature.png">Mature and Dependable</a> release. When the file downloads, open it, and say yes to all the confirmation prompts.
 
-7.Now you're ready to run River5. Enter this command: <i>node river5.js</i>
+7. Now you're ready to run River5. Enter this command in the Terminal app: <i>node river5.js</i>
 
 That's it! It should be doing its thing now, and you can follow the remaining instructions on the home page of the River5 site.
 
