@@ -16,9 +16,9 @@ River3 was a complete rewrite of the aggregator, without the UI, designed to run
 
 #### River4
 
-River4 had same basic functionality of River3, but ported to Node.js. River4 was one of my first Node projects. And it was designed to run in Heroku.So I used a variety of ways to configure an app, as I learned about them. And because Heroku apps don't have a filesystem that persists, I used S3 for storage, but later added the option of using the local filesystem when we had to migrate off Heroku.
+River4 had same basic functionality of River3, but ported to Node.js. River4 was one of my first Node projects. And it was designed to run in Heroku. So I used a variety of ways to configure an app, as I learned about them. And because Heroku apps don't have a filesystem that persists, I used S3 for storage, but later added the option of using the local filesystem when we had to migrate off Heroku.
 
-The net result is a bit of a hairball. It works, but it was hard for me to work on it. I felt that I could re-factor the code, and have a single way to configure it, and only use the filesystem for storage. That's River5.
+The net result was a bit of a hairball. It works, but it was hard for me to work on it and it's hard for users to set up and configure. I felt that I could re-factor the code, and have a single way to configure it, and only use the filesystem for storage. That's River5.
 
 #### River5
 
