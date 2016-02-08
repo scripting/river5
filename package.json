@@ -1,12 +1,17 @@
 {
-	"name": "feedTools",
-	"description": "A library of tools for reading RSS, Atom and RDF feeds from Node.js apps.",
+	"name": "river5",
+	"description": "A river-of-news RSS aggregator in JavaScript running in Node.",
 	"author": "Dave Winer <dave@smallpicture.com>",
-	"version": "0.40.0",
+	"version": "0.4.3",
+	"homepage": "https://groups.google.com/forum/?fromgroups#!forum/river5",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/scripting/river5"
+		},
 	"dependencies" : {
 		"request": "*",
 		"mime": "*",
-		"MD5": "*",
+		"md5": "*",
 		"nodejs-websocket": "*",
 		"opmlparser": "*",
 		"feedparser": "*"

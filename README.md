@@ -1,6 +1,6 @@
 ### River5
 
-River5 is a river-of-news RSS aggregator in JavaScript running in Node
+River5 is a <a href="http://scripting.com/2014/06/02/whatIsARiverOfNewsAggregator.html">river-of-news</a> RSS aggregator in JavaScript running in Node
 
 #### How River5 works
 
