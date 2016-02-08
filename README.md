@@ -96,7 +96,9 @@ The plan is to eventually offer it through the Node.js package distribution syst
 
 #### Other docs
 
-<a href="https://github.com/scripting/river5/blob/master/docs/ROADTORIVER5.md">The road to River5</a>, reviews  the previous versions of my river-of-news software going back to 1999, with a special focus on the transition from River4 to River5. 
+1. <a href="https://github.com/scripting/river5/blob/master/docs/ROADTORIVER5.md">The road to River5</a>, reviews  the previous versions of my river-of-news software going back to 1999, with a special focus on the transition from River4 to River5. 
+
+2. Here's a howto for the <a href="https://gist.github.com/scripting/87903653a0f5f6df13b4">Hello World of Rivers</a> to help show you how to create a standalone river, that people can access without accessing your RIver5 server. 
 
 #### Updates
 
