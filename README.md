@@ -46,7 +46,7 @@ I have included several files in the <i>lists</i> folder to help you get started
 
 1. <a href="https://github.com/scripting/river5/blob/master/lists/myJsonFeeds.json">myJsonFeeds.json</a> -- a list of URLs of feeds in the JSON format that River5 understands. 
 
-2. <a href="https://github.com/scripting/river5/blob/master/lists/myOpmlFeeds.opml">myOpmlFeeds.json</a> -- a list of URLs of feeds in the standard OPML <a href="http://dev.opml.org/spec2.html#subscriptionLists">format</a> for subscription lists.
+2. <a href="https://github.com/scripting/river5/blob/master/lists/myOpmlFeeds.opml">myOpmlFeeds.opml</a> -- a list of URLs of feeds in the standard OPML <a href="http://dev.opml.org/spec2.html#subscriptionLists">format</a> for subscription lists.
 
 3. <a href="https://github.com/scripting/river5/blob/master/lists/myTxtFeeds.txt">myTxtFeeds.txt</a> -- a list of URLS in a text file.
 
@@ -98,7 +98,7 @@ The plan is to eventually offer it through the Node.js package distribution syst
 
 1. <a href="https://github.com/scripting/river5/blob/master/docs/ROADTORIVER5.md">The road to River5</a>, reviews  the previous versions of my river-of-news software going back to 1999, with a special focus on the transition from River4 to River5. 
 
-2. Here's a howto for the <a href="https://gist.github.com/scripting/87903653a0f5f6df13b4">Hello World of Rivers</a> to help show you how to create a standalone river, that people can access without accessing your RIver5 server. 
+2. The <a href="https://gist.github.com/scripting/87903653a0f5f6df13b4">Hello World of Rivers</a> shows you how to create a standalone river, one that people can read without accessing your RIver5 server. 
 
 #### Updates
 
