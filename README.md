@@ -1,6 +1,6 @@
 ### River5
 
-River5 is a <a href="http://scripting.com/2014/06/02/whatIsARiverOfNewsAggregator.html">river-of-news</a> RSS aggregator in JavaScript running in Node
+River5 is a <a href="http://scripting.com/2014/06/02/whatIsARiverOfNewsAggregator.html">river-of-news</a> RSS aggregator in JavaScript running in Node, written by <a href="http://davewiner.com/">Dave Winer</a>.
 
 #### How River5 works
 
@@ -99,6 +99,8 @@ The plan is to eventually offer it through the Node.js package distribution syst
 1. <a href="https://github.com/scripting/river5/blob/master/docs/ROADTORIVER5.md">The road to River5</a>, reviews  the previous versions of my river-of-news software going back to 1999, with a special focus on the transition from River4 to River5. 
 
 2. The <a href="https://gist.github.com/scripting/87903653a0f5f6df13b4">Hello World of Rivers</a> shows you how to create a standalone river, one that people can read without accessing your RIver5 server. 
+
+3. My <a href="http://scripting.com/liveblog/users/davewiner/2016/02/09/0995.html">blog post</a> announcing River5. 
 
 #### Updates
 
