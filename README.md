@@ -104,6 +104,10 @@ The plan is to eventually offer it through the Node.js package distribution syst
 
 #### Updates
 
+##### v0.44 -- 2/22/16 by DW
+
+Fixed a bug that prevented text file lists from working. It would only subscribe to the last feed in the list.
+
 ##### v0.43 -- 2/4/16 by DW
 
 You can now configure the panels on the server's home page. 
