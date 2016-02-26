@@ -36,7 +36,7 @@ I'm assuming you're using a Mac though the instructions for Windows and Unix are
 
 #### How to create your own river
 
-Okay now you have River5 up and running, but it's only reading the feeds I told it to read. Things get more interesting when you create your own lists of feeds. 
+Okay now you have River5 up and running, but it's only reading the feeds I told it to read. Things get more interesting when you create your own list of feeds. 
 
 For this part you need a plain text editor, like Notepad on Windows or TextEdit on the Mac. 
 
@@ -44,9 +44,9 @@ For this part you need a plain text editor, like Notepad on Windows or TextEdit 
 
 2. Open your text editor and create a new file.
 
-3. Paste the into the text file at the beginning of the file.
+3. Paste the URL into the text file at the beginning of the file.
 
-4. Repeat for as many URLs as you have. 
+4. For each new URL add it <i>on its own line. 
 
 5. Save the file into the <i>lists</i> folder at the top level of the RIver5 app folder. Call the file <i>myRiver.txt</i> or something else that ends with .txt. 
 
@@ -56,7 +56,7 @@ There will be a new river named <i>myRiver.js</i> in the <i>rivers</i> folder.
 
 When you visit the home page of your site you will see a tab for your river, assuming you haven't customized the tabs on the home page.
 
-There's an <a href="https://github.com/scripting/river5/blob/master/lists/myTxtFeeds.txt">example</a> of a .txt list in the <i>lists</i> folder that you downloaded.
+There's an <a href="https://github.com/scripting/river5/blob/master/lists/myTxtFeeds.txt">example</a> of a .txt list in the <i>lists</i> folder that you downloaded. Here's a <a href="http://scripting.com/2016/02/26/listFile.png">screen shot</a> of that file open in my text editor. 
 
 #### Congratulations
 
