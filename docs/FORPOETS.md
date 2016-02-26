@@ -36,21 +36,27 @@ I'm assuming you're using a Mac though the instructions for Windows and Unix are
 
 #### How to create your own river
 
-Okay now you have River5 up and running, but it's reading the feeds I told it to read. Things get more interesting when you create your own lists of feeds. 
+Okay now you have River5 up and running, but it's only reading the feeds I told it to read. Things get more interesting when you create your own lists of feeds. 
 
-For this part you need a plain text editor, like Notepad on Windows or TexteEdito on the Mac. 
+For this part you need a plain text editor, like Notepad on Windows or TextEdit on the Mac. 
 
-1. Open your text editor and create a new file.
+1. FInd the URL of a feed you want to subscribe to and copy it to the clipboard.
 
-2. FInd the URL of a feed you want to subscribe to. Copy it to the clipboard.
+2. Open your text editor and create a new file.
 
-3. Paste it into the text file at the beginning of a line.
+3. Paste the into the text file at the beginning of the file.
 
 4. Repeat for as many URLs as you have. 
 
-5. Save the file into the <i>lists</i> folder at the top level of the RIver5 app folder. Call the file myRiver.txt or something else that ends with .txt. 
+5. Save the file into the <i>lists</i> folder at the top level of the RIver5 app folder. Call the file <i>myRiver.txt</i> or something else that ends with .txt. 
 
-6. Make sure River5 is running. At the top of the minute it will read your new file, along with all the others in the Lists folder, and add it to the feeds it checks. There will be a new river named myRiver.js in the <i>rivers</i> folder. When you visit the home page of your site you will see a tab for your river, assuming you haven't customized the tabs on the home page.
+Make sure River5 is running. At the top of the minute it will read the new file, along with all the others in the <i>lists</i> folder, and add it to the feeds it checks. 
+
+There will be a new river named <i>myRiver.js</i> in the <i>rivers</i> folder. 
+
+When you visit the home page of your site you will see a tab for your river, assuming you haven't customized the tabs on the home page.
+
+There's an <a href="https://github.com/scripting/river5/blob/master/lists/myTxtFeeds.txt">example</a> of a .txt list in the <i>lists</i> folder that you downloaded.
 
 #### Congratulations
 
