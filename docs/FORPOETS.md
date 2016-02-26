@@ -34,5 +34,25 @@ I'm assuming you're using a Mac though the instructions for Windows and Unix are
 
 8. Now you're ready to run River5. Enter this command in the Terminal app: <i>node river5.js</i>
 
+#### How to create your own river
+
+Okay now you have River5 up and running, but it's reading the feeds I told it to read. Things get more interesting when you create your own lists of feeds. 
+
+For this part you need a plain text editor, like Notepad on Windows or TexteEdito on the Mac. 
+
+1. Open your text editor and create a new file.
+
+2. FInd the URL of a feed you want to subscribe to. Copy it to the clipboard.
+
+3. Paste it into the text file at the beginning of a line.
+
+4. Repeat for as many URLs as you have. 
+
+5. Save the file into the <i>lists</i> folder at the top level of the RIver5 app folder. Call the file myRiver.txt or something else that ends with .txt. 
+
+6. Make sure River5 is running. At the top of the minute it will read your new file, along with all the others in the Lists folder, and add it to the feeds it checks. There will be a new river named myRiver.js in the <i>rivers</i> folder. When you visit the home page of your site you will see a tab for your river, assuming you haven't customized the tabs on the home page.
+
+#### Congratulations
+
 That's it! River5 should be doing its thing now, and you can follow the remaining instructions on the <a href="https://github.com/scripting/river5">home page</a> of this site.
 
