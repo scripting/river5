@@ -46,7 +46,7 @@ For this part you need a plain text editor, like Notepad on Windows or TextEdit 
 
 3. Paste the URL into the text file at the beginning of the file.
 
-4. For each new URL add it <i>on its own line. 
+4. For each new URL add it <i>on its own line. </i>
 
 5. Save the file into the <i>lists</i> folder at the top level of the RIver5 app folder. Call the file <i>myRiver.txt</i> or something else that ends with .txt. 
 
