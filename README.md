@@ -104,6 +104,12 @@ The plan is to eventually offer it through the Node.js package distribution syst
 
 #### Updates
 
+##### v0.45 -- 3/14/16 by DW
+
+Fixed a bug that prevented addToRiver callbacks from working correctly. When you made a change to an item in a river it wasn't actually being reflected back in the river. 
+
+As a result of this fix, <a href="https://github.com/scripting/river4/wiki/How-callbacks-work-in-River4">River4 callbacks</a> should now work in River5. 
+
 ##### v0.44 -- 2/22/16 by DW
 
 Fixed a bug that prevented text file lists from working. It would only subscribe to the last feed in the list.
