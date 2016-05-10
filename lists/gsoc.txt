@@ -1,1 +1,2 @@
 http://rhnvrm.github.io/feed-gsoc.xml
+http://mr-karan.github.io/feed_gsoc16.xml
