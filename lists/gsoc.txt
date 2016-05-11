@@ -1,2 +1,4 @@
 http://rhnvrm.github.io/feed-gsoc.xml
 http://mr-karan.github.io/feed_gsoc16.xml
+http://janakact.blogspot.in/feeds/posts/default/-/GSoC/?alt=rss
+http://ajinkya007.in/feed/?cat=gsoc-2016
