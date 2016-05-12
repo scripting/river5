@@ -6,3 +6,4 @@ http://sheikharaf.me/feed_gsoc16.xml
 http://sagarhani.wordpress.com/feed/atom/?tag=kde
 https://blog.musicbrainz.org/category/google-programs/summer-of-code/feed/
 https://srijanfoss2k16.blogspot.in/feeds/posts/default/-/GSoC/
+https://pulkit4tech.wordpress.com/tag/gsoc/feed/
