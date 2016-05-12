@@ -5,4 +5,4 @@ http://ajinkya007.in/category/gsoc-2016/feed/
 http://sheikharaf.me/feed_gsoc16.xml
 http://sagarhani.wordpress.com/feed/atom/?tag=kde
 https://blog.musicbrainz.org/category/google-programs/summer-of-code/feed/
-http://srijanfoss2k16.blogspot.in/search/label/Wikitolearn
+https://srijanfoss2k16.blogspot.in/feeds/posts/default/-/GSoC/
