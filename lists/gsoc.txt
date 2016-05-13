@@ -8,4 +8,4 @@ https://blog.musicbrainz.org/category/google-programs/summer-of-code/feed/
 https://srijanfoss2k16.blogspot.in/feeds/posts/default/-/GSoC/
 https://pulkit4tech.wordpress.com/tag/gsoc/feed/
 https://blog.justinwflory.com/tag/gsoc/feed/
-https://avikgp.wordpress.com/category/gsoc/
+https://avikgp.wordpress.com/category/gsoc/feed/
