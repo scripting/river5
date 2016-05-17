@@ -11,3 +11,4 @@ https://blog.justinwflory.com/tag/gsoc/feed/
 https://avikgp.wordpress.com/category/gsoc/feed/
 https://nisargshah95.wordpress.com/tag/gsoc2016/feed/
 http://rahul-raturi.github.io/feed-gsoc.xml
+http://pranith.github.io/blog/blog/categories/gsoc/atom.xml
