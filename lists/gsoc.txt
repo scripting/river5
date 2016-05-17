@@ -11,5 +11,4 @@ https://blog.justinwflory.com/tag/gsoc/feed/
 https://avikgp.wordpress.com/category/gsoc/feed/
 https://nisargshah95.wordpress.com/tag/gsoc2016/feed/
 http://rahul-raturi.github.io/feed-gsoc.xml
-http://www.rnavagamuwa.com/open-source/run-eclipse-mars-ide-inside-eclipse-che/
-http://www.rnavagamuwa.com/open-source/pluggable-editor-for-your-web-site/
+http://www.rnavagamuwa.com/category/gsoc/
