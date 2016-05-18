@@ -23,3 +23,4 @@ https://pandusonu.wordpress.com/tag/gnome/feed/
 https://riddhishbgsoc2016.wordpress.com/feed/
 https://blog.gautiercolajanni.fr/feed.gsoc.xml
 https://blog.radiumz.org/en/rss/gsoc2016.xml
+http://bitiquinho.github.io/feed-gsoc.xml
