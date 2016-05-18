@@ -19,3 +19,4 @@ https://cryptowriteup.wordpress.com/feed/?cat=gsoc-2016
 https://blog.pubudu.xyz/category/gsoc/feed/
 https://brokenpi.pe/feed.xml
 https://pandusonu.wordpress.com/tag/gnome/feed/
+https://riddhishbgsoc2016.wordpress.com/feed/
