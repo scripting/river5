@@ -21,3 +21,4 @@ https://blog.pubudu.xyz/category/gsoc/feed/
 https://brokenpi.pe/feed.xml
 https://pandusonu.wordpress.com/tag/gnome/feed/
 https://riddhishbgsoc2016.wordpress.com/feed/
+https://blog.gautiercolajanni.fr/feed.gsoc.xml
