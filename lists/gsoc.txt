@@ -14,3 +14,4 @@ http://rahul-raturi.github.io/feed-gsoc.xml
 http://pranith.github.io/blog/blog/categories/gsoc/atom.xml
 http://www.rnavagamuwa.com/category/gsoc/feed/
 http://thelastpolaris.blogspot.com/feeds/posts/default
+https://cryptowriteup.wordpress.com/feed/?cat=gsoc-2016
