@@ -15,3 +15,4 @@ http://pranith.github.io/blog/blog/categories/gsoc/atom.xml
 http://www.rnavagamuwa.com/category/gsoc/feed/
 http://thelastpolaris.blogspot.com/feeds/posts/default
 http://udiboy1209.github.io/blog
+https://cryptowriteup.wordpress.com/feed/?cat=gsoc-2016
