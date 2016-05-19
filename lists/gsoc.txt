@@ -28,3 +28,4 @@ https://g33kyaditya.wordpress.com/tag/gsoc16/feed/
 http://aallam.com/feed-gsoc.xml
 https://oddcoder.com/feed-gsoc.xml
 https://bugfinity.wordpress.com/feed
+http://s-hacker.info/blog/gsoc16/feeds/sympy.xml
