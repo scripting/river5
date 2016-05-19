@@ -25,3 +25,4 @@ https://blog.gautiercolajanni.fr/feed.gsoc.xml
 https://blog.radiumz.org/en/rss/gsoc2016.xml
 http://bitiquinho.github.io/feed-gsoc.xml
 https://g33kyaditya.wordpress.com/tag/gsoc16/feed/
+http://s-hacker.info/blog/gsoc16/feeds/sympy.xml
