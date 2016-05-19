@@ -27,3 +27,4 @@ http://bitiquinho.github.io/feed-gsoc.xml
 https://g33kyaditya.wordpress.com/tag/gsoc16/feed/
 http://aallam.com/feed-gsoc.xml
 https://oddcoder.com/feed-gsoc.xml
+https://bugfinity.wordpress.com/feed
