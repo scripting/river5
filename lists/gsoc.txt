@@ -26,3 +26,4 @@ https://blog.radiumz.org/en/rss/gsoc2016.xml
 http://bitiquinho.github.io/feed-gsoc.xml
 https://g33kyaditya.wordpress.com/tag/gsoc16/feed/
 http://aallam.com/feed-gsoc.xml
+https://oddcoder.com/feed-gsoc.xml
