@@ -31,3 +31,4 @@ https://bugfinity.wordpress.com/feed
 http://s-hacker.info/blog/gsoc16/feeds/sympy.xml
 https://devyani7kota.wordpress.com/category/gsoc,fedora/feed/
 http://ninjacomics.github.io/radioblogr/radioblogrfeeds/main.xml
+http://bhyrava.me/code/feed-gsoc.xml
