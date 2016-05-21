@@ -36,3 +36,4 @@ https://b1101.github.io/categories/gsoc/index.xml
 http://black-perl.in/feed/gsoc16/
 https://vinipsmaker.wordpress.com/category/computacao/gsoc2013-inkscape/feed/
 https://vinipsmaker.wordpress.com/category/computacao/gsoc2014-boost/feed/
+https://laysrodriguesdev.wordpress.com/category/gsoc/feed/
