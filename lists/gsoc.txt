@@ -39,3 +39,4 @@ https://vinipsmaker.wordpress.com/category/computacao/gsoc2014-boost/feed/
 https://laysrodriguesdev.wordpress.com/category/gsoc/feed/
 https://anjaligsoc16journey.blogspot.in/feeds/posts/default
 http://reachtarunhere.github.io/feed-gsoc.xml
+https://keenlearner.wordpress.com/feed/?tag=kde
