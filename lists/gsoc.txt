@@ -43,3 +43,4 @@ https://keenlearner.wordpress.com/feed/?tag=kde
 http://jailuthra.in/rss-gsoc.xml
 http://soumitraagarwal.github.io/BlendedJointAttention/feed.xml
 http://ranveeraggarwal.com/feeds/gsoc-16.xml
+https://sachinwrites.xyz/tag/gsoc/rss
