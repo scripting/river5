@@ -46,3 +46,4 @@ http://ranveeraggarwal.com/feeds/gsoc-16.xml
 https://sachinwrites.xyz/tag/gsoc/rss
 https://fashiontec.wordpress.com/feed/
 http://shivamkhandelwal.in/category/gsoc/feed/
+https://blog.bovan.me/rss.xml
