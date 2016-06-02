@@ -47,3 +47,4 @@ https://sachinwrites.xyz/tag/gsoc/rss
 https://fashiontec.wordpress.com/feed/
 http://shivamkhandelwal.in/category/gsoc/feed/
 https://blog.bovan.me/rss.xml
+http://karansaxena.blogspot.com/feeds/posts/default/-/GSOC
