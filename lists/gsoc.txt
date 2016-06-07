@@ -49,3 +49,4 @@ http://shivamkhandelwal.in/category/gsoc/feed/
 https://blog.bovan.me/rss.xml
 http://karansaxena.blogspot.com/feeds/posts/default/-/GSOC
 http://hrishikeshgoyal.blogspot.in/
+http://opensourcefever.netai.net/tag/gsoc/
