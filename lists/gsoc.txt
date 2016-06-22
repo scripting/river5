@@ -51,3 +51,4 @@ http://karansaxena.blogspot.com/feeds/posts/default/-/GSOC
 http://hrishikeshgoyal.blogspot.in/
 http://opensourcefever.netai.net/tag/gsoc/
 https://opticod.wordpress.com/category/gsoc-2016/feed/
+http://blog.shreyans-sheth.me/feed-gsoc.xml
