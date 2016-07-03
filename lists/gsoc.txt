@@ -53,3 +53,4 @@ http://opensourcefever.netai.net/tag/gsoc/
 https://opticod.wordpress.com/category/gsoc-2016/feed/
 http://blog.shreyans-sheth.me/feed-gsoc.xml
 https://gasuleg.github.io/feed.xml
+https://ilovefoss.wordpress.com/tag/gsoc/feed/
