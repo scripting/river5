@@ -8,6 +8,10 @@
 		"type": "git",
 		"url": "https://github.com/scripting/river5"
 		},
+	"scripts":{
+		"start": "node river5.js"
+	},
+	"main": "river5.js",
 	"dependencies" : {
 		"request": "*",
 		"mime": "*",

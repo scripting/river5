@@ -1,5 +1,0 @@
-http://status.aws.amazon.com/rss/ec2-us-east-1.rss
-http://www.aclu.org/blog/feed/
-http://www.bart.gov/news/rss/rss.xml
-http://code4lib.org/node/feed
-http://www.npr.org/rss/rss.php?id=1045
