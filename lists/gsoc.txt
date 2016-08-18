@@ -28,7 +28,6 @@ https://g33kyaditya.wordpress.com/tag/gsoc16/feed/
 http://aallam.com/feed-gsoc.xml
 https://oddcoder.com/feed-gsoc.xml
 https://bugfinity.wordpress.com/feed
-http://s-hacker.info/blog/gsoc16/feeds/sympy.xml
 https://devyani7kota.wordpress.com/category/gsoc,fedora/feed/
 http://ninjacomics.github.io/radioblogr/radioblogrfeeds/main.xml
 http://bhyrava.me/code/feed-gsoc.xml
@@ -54,3 +53,4 @@ https://opticod.wordpress.com/category/gsoc-2016/feed/
 http://blog.shreyans-sheth.me/feed-gsoc.xml
 https://gasuleg.github.io/feed.xml
 https://ilovefoss.wordpress.com/tag/gsoc/feed/
+http://shekharrajak.github.io/feed.xml
