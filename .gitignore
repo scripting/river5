@@ -1,0 +1,28 @@
+# This is a Git ignore file. Files matching the patterns specified here
+# will be ignored by Git.
+#
+# Git will ignore lines that start with a #, such as this line.
+#
+# To learn more about ignore files, see
+# https://help.github.com/articles/ignoring-files/ and
+# https://git-scm.com/docs/gitignore
+
+# Ignore installed dependencies. These are the responsibility of npm
+# and should not be committed. Use package.json to manage your module
+# dependencies.
+node_modules/
+
+# Ignore the application's data folders. They're used by the running 
+# application, but are not part of the application's code.
+data/
+rivers/
+
+# Ignore OS generated files. They make no difference to the application
+# and they make the code harder to understand when they are in the way.
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
