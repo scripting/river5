@@ -1,4 +1,4 @@
-<?xml encoding="ISO-8859-1" version="1.0"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 <opml version="2.0">
 	<head>
 		<title>lists/nyt.opml</title>
@@ -12,7 +12,7 @@
 		</head>
 	<body text="lists/nyt.opml">
 		<outline htmlUrl="" text="Media Decoder" title="Media Decoder" type="rss" xmlUrl="http://mediadecoder.blogs.nytimes.com/feed/"></outline>
-		<outline htmlUrl="http://www.nytimes.com/pages/international/africa/index.html?partner=rssnyt" text="NYT &gt; Africa" title="NYT &gt; Africa" type="rss" xmlUrl="http://www.nytimes.com/services/xml/rss/nyt/Africa.xml"></outline>
+		<outline htmlUrl="http://www.nytimes.com/pages/international/africa/index.html?partner=rssnyt" name="nytAfrica" text="NYT &gt; Africa " title="NYT &gt; Africa" type="rss" xmlUrl="http://www.nytimes.com/services/xml/rss/nyt/Africa.xml"></outline>
 		<outline htmlUrl="http://www.nytimes.com/pages/international/americas/index.html?partner=rssnyt" text="NYT &gt; Americas" title="NYT &gt; Americas" type="rss" xmlUrl="http://www.nytimes.com/services/xml/rss/nyt/Americas.xml"></outline>
 		<outline htmlUrl="http://www.nytimes.com/pages/arts/design/index.html?partner=rssnyt" name="nytArtAndDesign" text="NYT &gt; Art and Design" title="NYT &gt; Art and Design" type="rss" xmlUrl="http://www.nytimes.com/services/xml/rss/nyt/ArtandDesign.xml"></outline>
 		<outline htmlUrl="http://www.nytimes.com/pages/arts/index.html?partner=rss&amp;emc=rss" name="nytArts" text="NYT &gt; Arts" title="NYT &gt; Arts" type="rss" xmlUrl="http://www.nytimes.com/services/xml/rss/nyt/Arts.xml"></outline>
