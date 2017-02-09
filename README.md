@@ -104,6 +104,14 @@ The plan is to eventually offer it through the Node.js package distribution syst
 
 #### Updates
 
+##### v0.47 -- 2/9/17 by DW
+
+Two changes submitted by Andrew Shell.
+
+##### v0.46 -- 11/16/16 by DW
+
+Refreshed the admin app, <a href="http://rss2.io/admin/">relocated</a> it, and fixed a couple of entry-points it depends on that didn't work with CORS. 
+
 ##### v0.45 -- 3/14/16 by DW
 
 Fixed a bug that prevented addToRiver callbacks from working correctly. When you made a change to an item in a river it wasn't actually being reflected back in the river. 
