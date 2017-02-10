@@ -20,4 +20,7 @@
 	"engines": {
 		"node": "0.10.*"
 		}
+	},
+	"scripts": {
+		"start": "node river5.js"
 	}
