@@ -20,9 +20,9 @@ Pretty much everything in this narrative is configurable.
 
 A current Node.js installation. 
 
-The machine running River5 ahould be accessible over the Internet.
+The machine running River5 ahould able to access the Internet.
 
-It is possible to run the software in a limited form on a non-public machine. Of course, you won't be able to access the home page remotely, or receive realtime notifications of feed updates. You'll also have to find a way to upload the output files in the rivers folder to a place where they can be accessed.
+It is possible to run the software on a non-public machine. Of course, you won't be able to access the home page remotely, or receive realtime notifications of feed updates. You'll also have to find a way to upload the output files in the rivers folder to a place where they can be accessed, if you want others to be able to access your river.
 
 If you don't have Node.js installed on your machine, here are step by step <a href="https://github.com/scripting/river5/blob/master/docs/FORPOETS.md">instructions</a> for installing Node.js on a Macintosh. 
 
