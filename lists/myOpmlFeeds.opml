@@ -11,15 +11,16 @@
 		<windowRight>1500</windowRight>
 		</head>
 	<body text="lists/myopmlfeeds.opml">
+		<outline text="ACLU feeds" type="include" url="http://rss2.io/lists/aclu.opml"></outline>
 		<outline description="" htmlUrl="" name="advertisingAgeDigital" text="Ad Age Digital" title="Advertising Age - Digital" type="rss" xmlUrl="http://adage.com/rss-feed?section_id=32&amp;xml=RSS2"></outline>
-		<outline htmlUrl="http://www.aclu.org/blog" name="americanCivilLibertiesUnion" text="American Civil Liberties Union" title="Blog of Rights: Official Blog of the American Civil Liberties Union" type="rss" xmlUrl="http://www.aclu.org/blog/feed/"></outline>
 		<outline description="The Art of Technology" htmlUrl="http://arstechnica.com" name="arsTechnica" text="Ars Technica" title="Ars Technica" type="rss" xmlUrl="http://feeds.arstechnica.com/arstechnica/everything/"></outline>
+		<outline htmlUrl="http://scripting.com/" name="daveWiner" text="Dave's linkblog feed" title="Dave Winer" type="rss" xmlUrl="http://radio3.io/users/davewiner/rss.xml"></outline>
 		<outline name="davesIncludedFeeds" text="Dave-selected podcasts" type="include" url="http://podcatch.com/users/davewiner/podcasts.opml"></outline>
+		<outline htmlUrl="" name="fivethirtyeightfivethirtyeightFeatures" text="FiveThirtyEight" title="FiveThirtyEightFiveThirtyEight | Features" type="rss" xmlUrl="http://fivethirtyeight.com/features/feed/"></outline>
 		<outline htmlUrl="http://www.guardian.co.uk/world/usa" name="worldNewsUnitedStatesGuardiancouk" text="Guardian" title="World news: United States | guardian.co.uk" type="rss" xmlUrl="http://www.guardian.co.uk/world/usa/rss"></outline>
 		<outline description="Must-read media news" htmlUrl="http://mediagazer.com/" language="en-us" name="mediagazer" text="Mediagazer" title="Mediagazer" type="rss" version="RSS2" xmlUrl="http://mediagazer.com/feed.xml"></outline>
 		<outline description="Political Web, page A1" htmlUrl="http://www.memeorandum.com/" language="en-us" name="memeorandum" text="memeorandum" title="memeorandum" type="rss" version="RSS2" xmlUrl="http://www.memeorandum.com/feed.xml"></outline>
 		<outline description="Media, Tech &amp; Business Models" htmlUrl="http://www.mondaynote.com" text="Monday Note" title="Monday Note" type="rss" xmlUrl="http://feeds2.feedburner.com/monday-note"></outline>
-		<outline htmlUrl="" name="nateSilver8211Fivethirtyeight" text="Nate Silver" title="Nate Silver &amp;#8211; FiveThirtyEight" type="rss" xmlUrl="http://fivethirtyeight.com/contributors/nate-silver/feed/"></outline>
 		<outline description="Business, Innovation, Technology, Society" htmlUrl="" text="NYT Bits" title="NYT Bits" type="rss" xmlUrl="http://bits.blogs.nytimes.com/feed/"></outline>
 		<outline htmlUrl="" name="quartz" text="Quartz" title="Quartz" type="rss" xmlUrl="http://qz.com/feed/"></outline>
 		<outline htmlUrl="http://scripting.com/" text="Scripting News" title="Scripting News" type="rss" xmlUrl="http://scripting.com/rss.xml"></outline>

@@ -29,10 +29,10 @@
 			//websockets -- 2/1/16 by DW
 				var mySocket = undefined;
 				
-				function startWebSocketClient (s) {
+				function webSocketClient (s) {
 					var splitUrl = urlSplitter (window.location.href), host;
 					var urlSocket = "ws://" + splitUrl.host + ":" + serverConfig.webSocketPort + "/";
-					console.log ("startWebSocketClient: urlSocket == " + urlSocket);
+					console.log ("webSocketClient: urlSocket == " + urlSocket);
 					
 					mySocket = new WebSocket (urlSocket); 
 					mySocket.onopen = function (evt) {
@@ -46,15 +46,25 @@
 						if (words.length >= 2) { //new protocol as of 11/29/15 by DW
 							switch (words [0]) {
 								case "updated":
-									var listname = trimWhitespace (words [1]);
-									console.log ("updated " + listname);
+									var listname = stringLower (trimWhitespace (words [1]));
+									console.log ("webSocketClient, list updated: listname == " + listname);
+									for (var x in appPrefs.myRivers) {
+										var thislistname = stringPopExtension (stringLower (stringNthField (appPrefs.myRivers [x], "=", 2))) + ".js";
+										console.log (thislistname);
+										if (listname == thislistname) {
+											if (stringLower (x) == stringLower (appPrefs.currentPanelName)) {
+												console.log ("webSocketClient, updating the river: url == " + appPrefs.myRivers [x]);
+												httpGetRiver (appPrefs.myRivers [x]);
+												}
+											break;
+											}
+										}
 									break;
 								case "readfeed":
 									var urlfeed = trimWhitespace (words [1]);
 									break;
 								case "item":
 									var jsontext = stringDelete (eventData, 1, 5); //pop off "item "
-									console.log ("new item: jsontext == " + jsontext);
 									break;
 								default:
 									console.log (words [0] + words [1]);
@@ -135,7 +145,7 @@
 				}
 			function everySecond () {
 				if (mySocket === undefined) { //try to open the connection
-					startWebSocketClient ("hello world");
+					webSocketClient ("hello world");
 					}
 				}
 			function startup () {
