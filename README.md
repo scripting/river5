@@ -106,7 +106,7 @@ The plan is to eventually offer it through the Node.js package distribution syst
 
 ##### v0.47 -- 2/9/17 by DW
 
-Two changes submitted by Andrew Shell.
+Fixed two problems reported by Andrew Shell. Added some feeds to the default set up, and configured the default home page so it only has three panels and they have intelligent labels, using the relatively new <a href="https://github.com/scripting/river5/blob/master/docs/CONFIG.md#configuring-the-home-page">homePage</a> configuration option. 
 
 ##### v0.46 -- 11/16/16 by DW
 

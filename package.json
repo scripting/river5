@@ -2,11 +2,14 @@
 	"name": "river5",
 	"description": "A river-of-news RSS aggregator in JavaScript running in Node.",
 	"author": "Dave Winer <dave@smallpicture.com>",
-	"version": "0.4.3",
-	"homepage": "https://groups.google.com/forum/?fromgroups#!forum/river5",
+	"version": "0.47",
+	"homepage": "https://github.com/scripting/river5",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/scripting/river5"
+		},
+	"scripts": {
+		"start": "node river5.js"
 		},
 	"dependencies" : {
 		"request": "*",
