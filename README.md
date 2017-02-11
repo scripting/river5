@@ -106,7 +106,7 @@ The plan is to eventually offer it through the Node.js package distribution syst
 
 ##### v0.47 -- 2/9/17 by DW
 
-Fixed two problems reported by Andrew Shell. Added some feeds to the default set up, and configured the default home page so it only has three panels and they have intelligent labels, using the relatively new <a href="https://github.com/scripting/river5/blob/master/docs/CONFIG.md#configuring-the-home-page">homePage</a> configuration option. 
+Fixed two problems reported by Andrew Shell. Added some feeds to the default set up, and configured the default home page so it only has three panels and they have intelligent labels, using the relatively new <a href="https://github.com/scripting/river5/blob/master/docs/CONFIG.md#configuring-the-home-page">homePage</a> configuration option. Fixed a <a href="http://scripting.com/2017/02/11/cookiesInNytFeeds.html">problem</a> with NYT feeds and cookies. 
 
 ##### v0.46 -- 11/16/16 by DW
 
