@@ -46,10 +46,10 @@
 						if (words.length >= 2) { //new protocol as of 11/29/15 by DW
 							switch (words [0]) {
 								case "updated":
-									var listname = stringLower (trimWhitespace (words [1]));
+									var listname = stringPopExtension (stringLower (trimWhitespace (words [1]))) + ".js";;
 									console.log ("webSocketClient, list updated: listname == " + listname);
 									for (var x in appPrefs.myRivers) {
-										var thislistname = stringPopExtension (stringLower (stringNthField (appPrefs.myRivers [x], "=", 2))) + ".js";
+										var thislistname = stringLower (stringNthField (appPrefs.myRivers [x], "=", 2));
 										console.log (thislistname);
 										if (listname == thislistname) {
 											if (stringLower (x) == stringLower (appPrefs.currentPanelName)) {
