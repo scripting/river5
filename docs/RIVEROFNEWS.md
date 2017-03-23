@@ -1,6 +1,6 @@
 ### What is a River of News aggregator?
 
-River of News is a kind of RSS aggregator.
+<i>River of News</i> is a kind of RSS aggregator.
 
 Items are presented in reverse-chronologic order.
 
