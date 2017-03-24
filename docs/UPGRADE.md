@@ -10,9 +10,7 @@ On the River5 mail list, Anton <a href="https://groups.google.com/forum/?fromgro
 
 4. Copy from the downloaded folder into the original folder, the following items. <i>lib, misc, package.json, river5.js,</i> replacing the original versions.
 
-5. Delete the <i>node_modules</i> folder.
-
-6. At the command line enter <i>npm install</i> to recreate the <i>node_modules</i> folder. 
+6. At the command line enter <i>npm install</i> to install any new packages that might be called for by the latest version of River5.
 
 7. Restart the River5 app.
 
