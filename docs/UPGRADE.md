@@ -1,4 +1,4 @@
-### How to install the latest version of River5
+### How to upgrade to the latest version of River5
 
 On the River5 mail list, Anton <a href="https://groups.google.com/forum/?fromgroups#!topic/river5/6vraWxnIp2A">asks</a> how to install the latest version of the River5 software on an already-running river.
 
