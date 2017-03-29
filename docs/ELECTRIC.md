@@ -12,13 +12,13 @@ To begin it's only available on the Mac. As we go forward there may be Linux and
 
 #### Getting started
 
-To start, just launch the app and wait a few seconds. You should see items start to show up in the river automatically. 
+To start, unzip the download, launch the app. In a few seconds you should see new items start to flow into the river, automatically. 
 
-If you want to edit the subscription list to add your own feeds, or to remove some of the examples, choose <i>List editor</i> from the Pages menu. Return to the river view by choosing <i>River</i> from the same menu.
+If you want to edit the subscription list to add your own feeds, or to remove some of the examples, choose <i>List editor</i> from the Pages menu. Click the <i>Save</i> button to save your changes. Return to the river view by choosing <i>River</i> from the same menu.
 
 #### Lifting the hood
 
-To lift the nood, choose <i>Open River5 folder</i> from the Main menu. 
+Choose <i>Open River5 folder</i> from the Main menu. 
 
 What you'll <a href="http://scripting.com/2017/03/29/river5Folder.png">see</a> should look familiar to anyone who has run River5. 
 
