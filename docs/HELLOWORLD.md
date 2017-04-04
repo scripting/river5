@@ -10,7 +10,7 @@ The code on the Hello River page is yours to do with as you please. But the file
 
 #### How to
 
-Include riverbrowser.js in your page. It automatically includes the files it needs.
+Download the source for the Hello River page, and change the value of <i>urlDefaultRiver</i> to point to your river.js file. 
 
 The other files we include, the Lora font, menus.css, are just to make the sample app look good. They aren't required for your pages.
 
