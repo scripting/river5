@@ -100,11 +100,31 @@ These values tell River5 to quit when it notices that its main JavaScript file h
 
 ##### "urlDashboardSource": "http://rss2.io/code/feedtools/misc/dashboard.html",
 
-##### "urlFavicon": "http://rss2.io/code/favicon.ico"
+##### "urlFavicon": "http://rss2.io/code/favicon.ico",
 
 When you access the home page of your server, River5 loads the HTML source for the home page from the address specified by urlServerHomePageSource. If you want to develop a customized home page, and you're a JavaScript programmer, you can change this value. You are welcome to use the example at that address as starter code.   
 
 The second address is the HTML source of the dashboard, which is accessible from the home page. The third is the address of the server's favicon. 
+
+##### "podcastsFolder": "podcasts/", 
+
+##### "flDownloadPodcasts": true, 
+
+##### "maxFileNameLength": 32,
+
+##### "maxConcurrentPodcastDownloads": 10,
+
+These config values control whether River5 downloads podcasts, where they're stored, and how the downloader works.
+
+If you don't want River5 to download podcasts, set flDownloadPodcasts to false.
+
+It only downloads enclosures whose type begins with "audio/".
+
+Each feed gets its own sub-folder of the podcasts folder, so the podcasts are grouped by feed. 
+
+It sets the date of the file to the <i>pubDate</i> of the item in the feed. 
+
+It automatically creates the podcasts folder, so you don't have to create it yourself.
 
 ### Configuring the home page
 
