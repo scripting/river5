@@ -38,6 +38,10 @@ For debugging, I needed to be able to see info about the feeds RIver5 is working
 
 If you're using the feature that calls JavaScript code when a new item is added to a river, this is the folder where it will look for those scripts. It automatically creates that folder when the first new item is added. 
 
+##### "buildRiverCallbacksFolder": "callbacks/buildRiver/",
+
+This is the folder where it will look for scripts that are called whenever a river is built. Here's an <a href="https://gist.github.com/scripting/db7df50550a6481ef66bbfdd273dab68">example</a> of a script that could be put in the buildRiver callbacks folder.
+
 ##### "riverDataFileName": "riverData.json",
 
 ##### "listInfoFileName": "listInfo.json",

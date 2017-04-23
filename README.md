@@ -108,6 +108,8 @@ The plan is to eventually offer it through the Node.js package distribution syst
 
 Support for podcasting. New config values, described on the config docs <a href="https://github.com/scripting/river5/blob/master/docs/CONFIG.md#podcastsfolder-podcasts">page</a>.
 
+Added buildRiver callbacks. 
+
 ##### v0.48 -- 3/29/17 by DW
 
 Changes for <a href="http://scripting.com/2017/03/28/comingSoonElectricRiver.html">Electric River</a>. Added three new callbacks to config that allow us to do things a bit more efficiently because the reading and configuring app is running in the same process as the server. Wrote a <a href="https://github.com/scripting/river5/blob/master/docs/ELECTRIC.md">howto doc</a> for people with experience running River5. Added <i>flBuildEveryFiveSeconds</i> to config, if true, we build changed rivers every five seconds instead of once a minute, the default. Building rivers became a lot more efficient in the change from River4 so it made sense to allow them to be rebuilt more frequently. 
