@@ -108,7 +108,7 @@ The plan is to eventually offer it through the Node.js package distribution syst
 
 Support for podcasting. New config values, described on the config docs <a href="https://github.com/scripting/river5/blob/master/docs/CONFIG.md#podcastsfolder-podcasts">page</a>.
 
-Added buildRiver callbacks. 
+Added <a href="https://github.com/scripting/river5/blob/master/docs/CONFIG.md#buildrivercallbacksfolder-callbacksbuildriver">buildRiver</a> callbacks. 
 
 ##### v0.48 -- 3/29/17 by DW
 
