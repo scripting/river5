@@ -20,6 +20,8 @@ River5 has a built-in web server. It's needed for the home page which displays t
 
 River5 also can send information back to a client using the relatively new WebSockets technology. Right now this is still somewhat experimental, so if you're not using it, you can turn it off. But it's reallly cool, and you might want to try playing with it. ;-)
 
+Update: Here's a <a href="https://gist.github.com/scripting/4d56250e2c5235663cb2136b1f0b2516">demo app</a> that shows how to get updates from a River5 server.
+
 ##### "dataFolder": "data/",
 
 ##### "listsFolder": "lists/",
