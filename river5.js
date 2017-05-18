@@ -1,6 +1,5 @@
-
 /*  The MIT License (MIT)
-	Copyright (c) 2014-2016 Dave Winer
+	Copyright (c) 2014-2017 Dave Winer
 	
 	Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal
@@ -22,7 +21,7 @@
 	*/
 
 var fs = require ("fs");
-var feedtools = require ("./lib/feedtools.js"); 
+var feedtools = require ("davereader"); //5/18/17 by DW
 function readConfig (callback) {
 	fs.readFile ("config.json", function (err, data) {
 		var myConfig = new Object ();

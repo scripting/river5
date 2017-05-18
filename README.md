@@ -104,6 +104,20 @@ The plan is to eventually offer it through the Node.js package distribution syst
 
 #### Updates
 
+##### v0.50 -- 5/18/17 by DW
+
+Major new release of River5, but in a way not much changed. 
+
+The <i>lib</i> folder in the download is gone. The two items that were in the folder have been published using NPM, the official Node.js software distribution system. This means that these two packages can be used in projects other than River5. 
+
+The river5.js file, at the top level, has been changed to use the new version of feedtools, called <i>davereader</i> (the name feedtools was already taken). It should work exactly as before. 
+
+This change will make new feed-based software possible. I've written about that on the davereader repo. 
+
+Otherwise the change should be totally transparent to River5 users. The software should behave exactly as it did before. Not much software changed, it's just been reorganized to make it more useful in more situations. 
+
+Future updates will be logged in the <a href="https://github.com/scripting/reader#updates">Updates section</a> of the <i>reader</i> site.
+
 ##### v0.49 -- 4/18/17 by DW
 
 Support for podcasting. New config values, described on the config docs <a href="https://github.com/scripting/river5/blob/master/docs/CONFIG.md#podcastsfolder-podcasts">page</a>.
