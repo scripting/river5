@@ -106,15 +106,15 @@ The plan is to eventually offer it through the Node.js package distribution syst
 
 ##### v0.50 -- 5/18/17 by DW
 
-Major new release of River5, but in a way not much changed. 
+Major release of River5, but in a way not much changed. 
 
-The <i>lib</i> folder in the download is gone. The two items that were in the folder have <a href="https://www.npmjs.com/package/daveutils">been</a> <a href="https://www.npmjs.com/package/davereader">published</a> using <a href="https://www.npmjs.com/">NPM</a>, the official Node.js software distribution system. This means that they can be used in projects other than River5. 
+The <i>lib</i> folder is gone. The two items that were in the folder have <a href="https://www.npmjs.com/package/daveutils">been</a> <a href="https://www.npmjs.com/package/davereader">published</a> using <a href="https://www.npmjs.com/">NPM</a>, the official Node.js software distribution system. This means that they can be used in projects other than River5. 
 
-<a href="https://github.com/scripting/river5/blob/master/river5.js">river5.js</a>, at the top level of the repo, has been <a href="https://github.com/scripting/river5/commit/1b19d1b61cfda43761ec7c106a1dd380f82bc0b4#diff-25e8551cb24637c32e269ed7331a2518">changed</a> to use the new version of feedtools, called <i>davereader</i> (the name feedtools was already taken). It should work exactly as before. 
+<a href="https://github.com/scripting/river5/blob/master/river5.js">river5.js</a> has been <a href="https://github.com/scripting/river5/commit/1b19d1b61cfda43761ec7c106a1dd380f82bc0b4#diff-25e8551cb24637c32e269ed7331a2518">changed</a> to use the new version of feedtools, called <i>davereader</i> (the name feedtools was already taken). It should work exactly as before. 
 
-This change will make new feed-based software possible. I've <a href="https://github.com/scripting/reader#story">written</a> about that on the <i>reader</i> site. 
+This change will make new feed-based software possible. I've <a href="https://github.com/scripting/reader#story">written</a> about that on the <i>reader</i> site, and in a <a href="http://scripting.com/2017/05/18/davereaderIsTheEngineOfRiver5.html">blog post</a>. 
 
-Otherwise the change should be totally transparent to River5 users. The software should behave exactly as it did before. Not much actually changed, it's just been reorganized to make it more useful in more situations. 
+Otherwise the changes should be totally transparent to River5 users. The software should behave exactly as it did before. Not much actually changed, it's just been reorganized to make it more useful in more situations. 
 
 Future updates will be logged in the <a href="https://github.com/scripting/reader#updates">Updates section</a> of the <i>reader</i> site.
 
