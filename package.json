@@ -19,7 +19,7 @@
 		"opmlparser": "*",
 		"feedparser": "*",
 		"daveutils": "*",
-		"davereader": "*",
+		"davereader": "*"
 		}, 
 	"license": "MIT",
 	"engines": {
