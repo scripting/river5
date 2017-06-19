@@ -1,8 +1,8 @@
-### River5
+# River5
 
 River5 is a <a href="http://scripting.com/2014/06/02/whatIsARiverOfNewsAggregator.html">river-of-news</a> RSS aggregator in JavaScript running in Node, written by <a href="http://scripting.com/liveblog/users/davewiner/2016/02/09/0995.html">Dave Winer</a>.
 
-#### How River5 works
+## How River5 works
 
 When it starts up, River5 reads files in the <i>lists</i> folder at the top level of the River5 folder.
 
@@ -16,7 +16,7 @@ To read the output of River5 on the machine it's running on, go to the home page
 
 Pretty much everything in this narrative is configurable. 
 
-#### Requirements
+## Requirements
 
 A current Node.js installation. 
 
@@ -26,7 +26,7 @@ It is possible to run the software on a non-public machine. Of course, you won't
 
 If you don't have Node.js installed on your machine, here are step by step <a href="https://github.com/scripting/river5/blob/master/docs/FORPOETS.md">instructions</a> for installing Node.js on a Macintosh. 
 
-#### How to install
+## How to install
 
 1. Download the folder from the repository to your local computer. 
 
@@ -40,7 +40,7 @@ If it's working properly, you should see tons of stories scroll by in the consol
 
 At first there will be a lot of old stories, but as the rivers run for hours and days and into weeks, you'll get the flow. It's a good way to read news.
 
-#### Examples of lists
+## Examples of lists
 
 I have included several files in the <i>lists</i> folder to help you get started, so something actually happens the first time you run River5. You can edit, consolidate or delete them, as you wish. 
 
@@ -54,11 +54,11 @@ I have included several files in the <i>lists</i> folder to help you get started
 
 5. <a href="https://github.com/scripting/river5/blob/master/lists/hn.opml">hn.opml</a> -- a list with just one feed in it, the Hacker News firehose. It's a good list for testing RIver5 because it updates so frequently.
 
-#### To view your rivers
+## To view your rivers
 
 Go to <a href="http://localhost:1337/">http://localhost:1337/</a>.
 
-#### Configuring
+## Configuring
 
 There's only one way to configure it, via the config.json file in the same folder as the river5.js app.
 
@@ -66,7 +66,7 @@ The example config.json in the folder sets the max number of items in a river to
 
 All of the config.json options and their default values are listed on <a href="https://github.com/scripting/river5/blob/master/docs/CONFIG.md">this page</a>.
 
-#### For River4 users
+## For River4 users
 
 River5 does not support S3 storage, so if that's how you're running your rivers, you should continue to use <a href="https://github.com/scripting/river4">River4</a>.
 
@@ -78,11 +78,11 @@ River5 does not support S3 storage, so if that's how you're running your rivers,
 
 You may want to review the Configuration settings page, there are options for setting new things, and in some cases the defaults have changed. 
 
-#### Where's the code?
+## Where's the code?
 
 The heart of River5 is in a Node package in the lib folder, called <a href="https://www.npmjs.com/package/davereader">davereader</a>.
 
-#### Examples of working rivers
+## Examples of working rivers
 
 1. <a href="http://podcatch.com/">Podcatch.com</a> subscribes to my friends' podcast feeds.
 
@@ -92,7 +92,7 @@ The heart of River5 is in a Node package in the lib folder, called <a href="http
 
 4. My <a href="http://radio3.io/rivers/">rivers page</a> puts all the news I care about on a single tabbed page, with panels for the NYT, Washington Post, Guardian, Movies, Tech, baseball and basketball.
 
-#### Other docs
+## Other docs
 
 1. <a href="https://github.com/scripting/river5/blob/master/docs/ROADTORIVER5.md">The road to River5</a>, reviews  the previous versions of my river-of-news software going back to 1999, with a special focus on the transition from River4 to River5. 
 
@@ -100,7 +100,7 @@ The heart of River5 is in a Node package in the lib folder, called <a href="http
 
 3. My <a href="http://scripting.com/liveblog/users/davewiner/2016/02/09/0995.html">blog post</a> announcing River5. 
 
-#### Updates
+## Updates
 
 ##### v0.50 -- 5/18/17 by DW
 
@@ -174,7 +174,7 @@ One of the first bennies of rebuilding the river software, it's now quite a bit 
 
 Now the calendar structure is just an archive, it's no longer used to build anything. It could be made optional. 
 
-#### Questions, comments?
+## Questions, comments?
 
 Please post a note on the <a href="https://groups.google.com/forum/?fromgroups#!forum/river5">River5</a> mail list. 
 

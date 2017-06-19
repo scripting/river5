@@ -12,5 +12,5 @@ There's a way to do it, in fact I do it myself for my personal subscription list
 
 Save it. When you want to add an item to your subscription list, just add it to the included Dropbox list. When River5 reads the list, it  automatically "goes into" includes. 
 
-And of course the target of the include can be anywhere, it doesn't have to be in Dropbox. I actually wrote this howto for a developer who wants to have a server app generate the list. This technique will work there too. ;-)
+And of course the target of the include can be anywhere, it doesn't have to be in Dropbox. I actually wrote this howto for a <a href="https://github.com/scripting/river5/issues/10">developer</a> who wants to have a server app generate the list. This technique will work there too. ;-)
 
