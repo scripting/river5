@@ -1,7 +1,5 @@
 ### Using Dropbox for subscription lists
 
-This is an advanced topic for technical users.
-
 Suppose you want to edit the subscription list of your River5 server through Dropbox, or Google Drive, or an equivalent service?
 
 There's a way to do it, in fact I do it myself for my personal subscription list. 
