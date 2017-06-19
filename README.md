@@ -80,9 +80,7 @@ You may want to review the Configuration settings page, there are options for se
 
 #### Where's the code?
 
-The heart of River5 is in a Node package in the lib folder, called <a href="https://github.com/scripting/river5/blob/master/lib/feedtools.js">feedtools.js</a>.
-
-The plan is to eventually offer it through the Node.js package distribution system so we can easily include feed functionality in other apps. For right now, feedtools.js is set up just to work with river5.js. 
+The heart of River5 is in a Node package in the lib folder, called <a href="https://www.npmjs.com/package/davereader">davereader</a>.
 
 #### Examples of working rivers
 
