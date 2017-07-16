@@ -184,6 +184,12 @@
 				console.log ("startup");
 				$("#idVersionNumber").html ("v" + appConsts.version);
 				twStorageData.urlTwitterServer = appConsts.urlTwitterServer; //4/13/15 by DW
+				riverBrowserData.getFaviconCallback = function (feed) { //7/10/17 by DW
+					var favicon = "<img class=\"imgFavIcon\" src=\"" + getFavicon (feed.websiteUrl) + "\" width=\"16\" height=\"16\">";
+					var url = serverConfig.urlFeedViewerApp + "?server=" + window.location.host + "&url=" + feed.feedUrl;
+					favicon = "<a href=\"" + url + "\" target=\"_blank\">" + favicon + "</a>";
+					return (favicon);
+					};
 				initMenus ();
 				hitCounter (); //9/4/14 by DW
 				setupPanels (function () {
