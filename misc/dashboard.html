@@ -1085,7 +1085,13 @@ function getAppUrl () { //11/13/15 by DW
 	url = stringNthField (url, "#", 1);
 	return (url);
 	}
-function getFacebookTimeString (when) { //11/13/15 by DW
+function getFacebookTimeString (when, flLongStrings) { //11/13/15 by DW
+	
+	var theStrings = [" min", " hr"]; //9/29/17 by DW
+	if (flLongStrings) {
+		theStrings = [" minute", " hour"];
+		}
+	
 	when = new Date (when); //make sure it's a date
 	var ctsecs = secondsSince (when), ct, s;
 	if (ctsecs < 60) {
@@ -1095,7 +1101,7 @@ function getFacebookTimeString (when) { //11/13/15 by DW
 	var ctminutes = ctsecs / 60;
 	if (ctminutes < 60) {
 		ct = Math.floor (ctminutes);
-		s = ct + " min";
+		s = ct + theStrings [0]; //" min";
 		if (ct != 1) {
 			s += "s";
 			}
@@ -1105,7 +1111,7 @@ function getFacebookTimeString (when) { //11/13/15 by DW
 	var cthours = ctminutes / 60;
 	if (cthours < 24) {
 		ct = Math.floor (cthours);
-		s = ct + " hr";
+		s = ct + theStrings [1]; //" hr";
 		if (ct != 1) {
 			s += "s";
 			}
@@ -1186,6 +1192,81 @@ function fsSureFilePath (path, callback) { //5/17/17 by DW
 			callback ();
 			}
 		}
+	}
+function downloadBigFile (url, f, pubDate, callback) { //7/22/17 by DW
+	fsSureFilePath (f, function () {
+		var theStream = fs.createWriteStream (f);
+		theStream.on ("finish", function () {
+			if (pubDate === undefined) {
+				pubDate = new Date ();
+				}
+			else {
+				pubDate = new Date (pubDate);
+				}
+			fs.utimes (f, pubDate, pubDate, function () {
+				});
+			if (callback !== undefined) {
+				callback ();
+				}
+			});
+		request.get (url)
+			.on ('error', function (err) {
+				console.log (err);
+				})
+			.pipe (theStream);
+		});
+	}
+function fsIsFolder (path) { //7/26/17 by DW
+	return (fs.statSync (path).isDirectory ());
+	}
+function daysInMonth (theDay) { //7/31/17 by DW
+	return (new Date (theDay.getYear (), theDay.getMonth () + 1, 0).getDate ());
+	}
+function fsSureFilePathSync (path) { //8/3/17 by DW
+	var splits = path.split ("/");
+	path = ""; 
+	if (splits.length > 0) {
+		function doLevel (levelnum) {
+			if (levelnum < (splits.length - 1)) {
+				path += splits [levelnum] + "/";
+				if (fs.existsSync (path)) {
+					doLevel (levelnum + 1);
+					}
+				else {
+					fs.mkdirSync (path, undefined);
+					doLevel (levelnum + 1);
+					}
+				}
+			}
+		doLevel (0);
+		}
+	return (true);
+	}
+function fsSureFolder (folder, callback) { //8/3/17 by DW
+	fsSureFilePath (folder + "x", callback);
+	return (folder);
+	}
+function runAtTopOfMinute (callback) { //8/11/17 by DW
+	setTimeout (callback, (60 - new Date ().getSeconds ()) * 1000);
+	}
+function visitDirectory (folder, callback) { //8/30/17 by DW
+	if (!endsWith (folder, "/")) {
+		folder += "/";
+		}
+	sureFilePath (folder, function () {
+		fs.readdir (folder, function (err, list) {
+			if (err) {
+				console.log ("visitDirectory: err.message == " + err.message);
+				}
+			else {
+				if (list !== undefined) { 
+					for (var i = 0; i < list.length; i++) {
+						callback (folder + list [i]);
+						}
+					}
+				}
+			});
+		});
 	}
 
 			

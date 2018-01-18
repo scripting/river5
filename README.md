@@ -82,6 +82,10 @@ You may want to review the Configuration settings page, there are options for se
 
 The heart of River5 is in a Node package in the lib folder, called <a href="https://www.npmjs.com/package/davereader">davereader</a>.
 
+To upgrade to the latest version of the software `npm update` at the command line in the river5 folder.
+
+river5.js itsef is a very small file and by design almost never changes. 
+
 ## Examples of working rivers
 
 1. <a href="http://podcatch.com/">Podcatch.com</a> subscribes to my friends' podcast feeds.
