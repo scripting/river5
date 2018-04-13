@@ -1,0 +1,59 @@
+.divMenubar {
+	}
+.divMenubar .container { 
+	width: 840px;
+	}
+.divMenubar .dropdown {
+	font-family: Ubuntu;
+	font-size: 16px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	}
+.divMenubar .navbar .nav > li > a { 
+	font-size: 16px;
+	letter-spacing: .05em;
+	padding-top: 12px;
+	padding-left: 8px; padding-right: 8px; //6/3/13 by DW
+	outline: none !important;
+	}
+.dropdown-menu > li > a {
+	cursor: pointer;
+	}
+.navbar-inner { 
+	-moz-border-radius: 0;
+	-moz-border-radius: none; 
+	-moz-box-shadow: none; 
+	background-image: none; 
+	border-radius: 0;  
+	}
+.divMenubar .brand { 
+	margin-top: 5px;
+	margin-bottom: 5px;
+	}
+.divMenubar .nav li {
+	font-family: Ubuntu;
+	font-size: 16px;
+	font-weight: bold;
+	}
+.menuKeystroke {
+	float: right;
+	margin-left: 25px;
+	}
+.menuKeystroke:before {
+	content: "";
+	}
+ #idMenuProductName {
+	font-family: Rancho;
+	font-size: 32px;
+	}
+.divNavSocialMediaLinks {
+	margin-top: 15px;
+	font-size: 1.3em;
+	float: right;
+	}
+.divNavSocialMediaLinks .nav>li>a {
+	display: inline;
+	}
+.divNavSocialMediaLinks .aSocialMediaLink {
+	letter-spacing: 14px;
+	}

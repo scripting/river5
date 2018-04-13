@@ -20,7 +20,7 @@
 	SOFTWARE.
 	*/
 
-var fs = require ("fs");
+var fs = require ("fs"); 
 var feedtools = require ("davereader"); //5/18/17 by DW
 function readConfig (callback) {
 	fs.readFile ("config.json", function (err, data) {

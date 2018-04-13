@@ -1,0 +1,116 @@
+/* prefs */
+	.divPrefsDialog {
+		font-family: Arial;
+		font-size: 16px;
+		line-height: 140%;
+		}
+	.divPrefsDialog p {
+		font-family: Arial;
+		font-size: 16px;
+		line-height: 140%;
+		min-height: 10px;
+		margin-bottom: 1.3em;
+		}
+	.divPrefsDialog label { 
+		display: inline;
+		float: left;
+		text-align: right;
+		padding-top: 4px;
+		width: 130px;
+		margin-right: .5em;
+		font-family: Arial;
+		font-size: 16px;
+		}
+	.divPrefsDialog fieldset { /* 4/30/13 by DW */
+		margin-left: 5px;
+		margin-right: 5px;
+		}
+	.divPrefsDialog .clearfix { 
+		margin-bottom: 18px;
+		}
+	.divPrefsDialog .uneditable-input { 
+		-moz-box-shadow: 0;
+		border: none;
+		}
+	.divPrefsDialog .divPrefsCheckbox { 
+		margin-left: 140px;
+		margin-top: -2px;
+		}
+	.divPrefsDialog .divPrefsRadioList {
+		margin-left: 140px;
+		line-height: 200%;
+		}
+	.divPrefsDialog h3 { 
+		margin-top: 10px;
+		margin-bottom: 6px;
+		}
+	.divPrefsDialog .divPrefsCheckbox input { 
+		margin-top: 0;
+		}
+	.divPrefsDialog textarea { 
+		width: 530px;
+		height: auto;
+		display: inline-block;
+		}
+	.divPrefsDialog .row {
+		line-height: 24px;
+		margin-bottom: 12px;
+		}
+	.divPrefsDialog red {
+		color: red;
+		}
+	.divPrefsDialog h4 {
+		font-size: 22px;
+		padding-top: 15px;
+		padding-bottom: 12px;  /* 4/12/12 DW -- increased from 5px */
+		}
+	
+	.divPrefsDialog .xlarge {
+		width: 530px;
+		font-size: 16px;
+		height: auto;
+		}
+	.divPrefsDialog input {
+		margin-bottom: 0;
+		}
+	
+	.divPrefsDialog .nav { 
+		margin-bottom: 18px;
+		}
+	.divDialogElements input {
+		font-size: 18px;
+		padding: 3px; 
+		height: 32px; 
+		}
+	.divDialogElements .xlarge {
+		width: 530px;
+		font-size: 16px;
+		height: auto;
+		}
+	.divDialogElements .numberPrefsInput {
+		width: 50px;
+		}
+	.divDialogElements textarea { 
+		width: 530px;
+		height: auto;
+		display: inline-block;
+		font-size: 16px;
+		}
+	.divDialogElements input[type="checkbox"] {
+		margin-right: 3px;
+		margin-top: -1px;
+		}
+	.divButton {
+		padding-top: 12px;
+		}
+	.divPrefsDialog .modal {
+		left: 40%;
+		width: 740px;
+		}
+	.divPrefsDialog .btn {
+		width: 80px;
+		margin-left: 5px;
+		}
+	.divPrefsDialog .ui-input-text, .divPrefsDialog .ui-checkbox { /* 4/11/13 by DW */
+		display: inline-block;
+		}

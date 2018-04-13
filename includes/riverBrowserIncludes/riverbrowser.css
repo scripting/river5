@@ -1,0 +1,229 @@
+.divRiverContainer {
+	max-width: 675px;
+	margin-left: auto;
+	margin-right: auto;
+	}
+.divRiverContainer a {
+	color: #1E68A6;
+	}
+.divRiverInTab {
+	border: 1px solid #ddd;
+	background-color: whitesmoke;
+	}
+.divRiversBody {
+	}
+.divRiverDisplay {
+	font-family: "Lora", "Georgia";
+	width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	}
+.divTweetInRiver {
+	color: green;
+	visibility: hidden;
+	}
+
+.divRiverSection {
+	padding: 0.5em 0 0; 
+	border-top: 1px solid #bbb; 
+	margin: 2em 0 0;
+	}
+.divFeedTitle {
+	font-family: Ubuntu;
+	color: #777777;
+	float: left;
+	padding: 0 8px 0 0;
+	margin: -17px 0 0 0;
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 1.2em;
+	background: whitesmoke;
+	}
+.spFeedUpdateTime {
+	font-family: Ubuntu;
+	float: right;
+	padding: 0 0 0 8px;
+	color: #777777;
+	margin: -17px 0 0 0;
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 1.2em;
+	background: whitesmoke;
+	}
+.divItem {
+	margin-top: 10px;
+	}
+.divItemHeader {
+	font-family: "Ubuntu";
+	font-weight: bold;
+	line-height: 125%;
+	margin-bottom: 7px;
+	color: #65798D;
+	}
+.divItemFooter {
+	clear: both;
+	margin: 0 20px 0 0;
+	font-size: 0.6875em; 
+	color: #666;
+	}
+.imgFavIcon {
+	position: relative;
+	top: -1px;
+	float: left;
+	margin: 0 6px 0 -22px;
+	border: 0;
+	vertical-align: middle;
+	}
+.divItemDescription {
+	margin: 0 0 5px;
+	font-size: 0.85em;
+	line-height: 135%;
+	color: #333;
+	}
+.spTimeDifference {
+	font-family: Ubuntu;
+	font-size: 12px;
+	color: #777777;
+	}
+.spShareLink, .spEnclosureLink {
+	margin-left: .5em;
+	cursor: pointer;
+	font-size: 12px;
+	}
+.spShareLink a, .spEnclosureLink a {
+	color: silver;
+	text-decoration: none;
+	}
+.divInterItemSpacer {
+	height: 10px;
+	}
+.divRiverTabs {
+	font-family: Ubuntu;
+	font-size: 16px;
+	}
+.divRiverTabs .active {
+	font-weight: bold;
+	}
+.divRiverTabs a {
+	color: #777777;
+	}
+.divRiverTabs .nav-tabs > .active > a, .nav-tabs > .active > a:hover, .nav-tabs > .active > a:focus {
+	background-color: whitesmoke;
+	}
+.divVersionNumber {
+	font-family: Ubuntu;
+	}
+.divRenderedOutline {
+	}
+.divOutlineSubs li {
+	list-style-type: none;
+	}
+.divRenderedOutline .ulOutlineList {
+	padding: 0;
+	}
+.divRenderedOutline .divOutlineText {
+	line-height: 135%;
+	font-size: 0.85em;
+	min-height: 0.85em;
+	color: black;
+	margin-bottom: 10px;
+	}
+.divRenderedOutline .divMarkdownSubs {
+	line-height: 150%;
+	font-size: 0.85em;
+	color: black;
+	}
+.divOutlineHead {
+	font-weight: bold;
+	}
+.divRenderedOutline .divOutlineHead .aOutlineTextLink {
+	color: #1E68A6;
+	}
+.divRenderedOutline .liHasSubs ul {
+	}
+.divRenderedOutline .liNoSubs {
+	}
+.divRenderedOutline .spOutlineIcon {
+	margin-right: -11px;
+	}
+.divRenderedOutline .aOutlineWedgeLink {
+	color: black;
+	}
+.divRenderedOutline .aOutlineWedgeLink i {
+	color: black;
+	cursor: pointer;
+	position: relative;
+	width: .5em;
+	left: -1em;
+	}
+.divRenderedOutline .aTwitterLink {
+	font-size: 0.9em;
+	cursor: pointer;
+	position: relative;
+	width: .5em;
+	left: -1.4em;
+	margin-right: -4px;
+	opacity: .4;
+	}
+.divRenderedOutline .aImageIconLink {
+	font-size: 0.9em;
+	cursor: pointer;
+	position: relative;
+	width: .5em;
+	left: -1.4em;
+	margin-right: -7px;
+	opacity: .4;
+	}
+.divRenderedOutline .divRenderedImage {
+	margin-bottom: 2px;
+	}
+
+.divRenderedOutline .aOutlineTextLink {
+	cursor: pointer;
+	color: black;
+	text-decoration: none;
+	}
+.divRenderedOutline .spPermalink {
+	}
+.divRenderedOutline .spPermalink a {
+	text-decoration: none;
+	color: purple;
+	font-size: 10px;
+	font-weight: normal;
+	vertical-align: top;
+	margin-left: 3px;
+	}
+.divRenderedOutline code {
+	display: inline;
+	border: none;
+	color: black;
+	font-size: .85em;
+	}
+
+.spBoldHead {
+	font-weight: bold;
+	}
+
+/* 6/15/17 by DW */
+	.spRiverPermaLink {
+		float: right;
+		margin-top: 2px;
+		margin-left: .4em;
+		}
+	.spRiverPermaLink a {
+		font-family: "Ubuntu";
+		color: purple;
+		opacity: 0.5;
+		font-weight: normal;
+		font-size: 14px;
+		cursor: pointer;
+		}
+/* 2/5/16 by DW */
+	.divGetRiverError {
+		font-family: "Ubuntu";
+		font-size: 20px;
+		margin-top: 2em;
+		margin-bottom: 3em;
+		line-height: 145%;
+		}
+
