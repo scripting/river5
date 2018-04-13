@@ -1,0 +1,146 @@
+body {
+	font-family: Ubuntu;
+	font-size: 18px;
+	background-color: whitesmoke;
+	}
+.divPageBody {
+	width: 80%;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 400px;
+	}
+.divTopFeedTitle {
+	font-size: 42px;
+	font-weight: bold;
+	margin-top: .2em;
+	margin-bottom: .75em;
+	text-rendering: optimizeLegibility;
+	color: black;
+	}
+.divTopFeedTitle a {
+	color: black;
+	}
+.divTopFeedDescription {
+	font-size: 16px;
+	margin-left: 3px;
+	}
+.divWhenLastNewItem {
+	font-size: 16px;
+	margin-left: 3px;
+	}
+.divFeedItems {
+	}
+.divItemHeader a {
+	color: black;
+	font-weight: normal;
+	}
+.divItem {
+	border-bottom: 1px dotted silver;
+	padding-bottom: 3px;
+	margin-top: 25px;
+	}
+.divTopOfPage {
+	}
+.divLeftPanel {
+	display: table-cell;
+	width: 50%;
+	margin-right: 40px;
+	}
+.divRightPanel {
+	display: table-cell;
+	border: 1px solid silver;
+	background-color: white;
+	width: 50%;
+	height: 100%;
+	padding: 3px;
+	}
+.divFeedDisplay {
+	display: table;
+	}
+.tdLeftPanel {
+	width: 50%;
+	vertical-align: top;
+	border-right: 1px solid silver;
+	padding: 3px;
+	}
+.tdRightPanel {
+	vertical-align: top;
+	width: 50%;
+	}
+.divFeedItem {
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-left: 7px;
+	border-bottom: 1px solid silver;
+	cursor: pointer;
+	}
+.divItemTitle {
+	font-weight: bold;
+	margin-bottom: 5px;
+	}
+.divItemBody {
+	line-height: 140%;
+	}
+.itemHighlighted {
+	color: white;
+	background-color: #086DD6;
+	}
+pre {
+	margin: 0;
+	}
+
+
+
+.divFullDescription {
+	font-family: "Georgia";
+	font-size: 18px;
+	line-height: 140%;
+	}
+.divContentTitle, .divTopFeedTitle {
+	font-size: 32px;
+	font-weight: bold;
+	margin-top: .5em;
+	margin-bottom: .5em;
+	text-rendering: optimizeLegibility;
+	color: darkslategray;
+	}
+.divContentTitle a {
+	color: darkslategray;
+	}
+.divItemContent {
+	padding-left: 30px;
+	padding-right: 30px;
+	position: fixed;
+	}
+.divWhenItem {
+	font-size: 15px;
+	opacity: .6;
+	margin-top: 5px;
+	}
+.divContentPubDateLine, .divWhenLastNewItem {
+	width: 100%;
+	font-size: 18px;
+	color: darkgray;
+	border-bottom: 1px solid gainsboro;
+	padding-bottom: 5px;
+	margin-bottom: 20px;
+	}
+
+
+/* styles for tablet */
+	@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+		.divPageBody {
+			width: 98%;
+			}
+		.divContentPubDateLine, .divWhenLastNewItem {
+			font-size: 16px;
+			}
+		.divContentTitle, .divTopFeedTitle {
+			font-size: 24px;
+			}
+		.divFullDescription {
+			font-size: 17px;
+			}
+		}
+
