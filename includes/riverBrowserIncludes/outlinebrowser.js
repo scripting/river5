@@ -1,12 +1,9 @@
 //code that displays an outline jstruct in javascript
 
 
-document.write ('<script src="http://fargo.io/code/markdownConverter.js"></script>');
-document.write ('<link href="http://fargo.io/code/browsers/outlinebrowser.css" rel="stylesheet" type="text/css">');
-document.write ('<script src="http://fargo.io/code/shared/emojify.js"></script>');  //7/3/17 by DW
 
 var outlineBrowserData = {
-	version: "0.5.0",
+	version: "0.5.1",
 	serialNum: 0,
 	flTextBasedPermalinks: true, //1/26/17 by DW
 	flProcessEmoji: true, //7/3/17 by DW
