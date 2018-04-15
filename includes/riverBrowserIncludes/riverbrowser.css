@@ -204,6 +204,20 @@
 	font-weight: bold;
 	}
 
+/* 6/15/17 by DW */
+	.spRiverPermaLink {
+		float: right;
+		margin-top: 2px;
+		margin-left: .4em;
+		}
+	.spRiverPermaLink a {
+		font-family: "Ubuntu";
+		color: purple;
+		opacity: 0.5;
+		font-weight: normal;
+		font-size: 14px;
+		cursor: pointer;
+		}
 /* 2/5/16 by DW */
 	.divGetRiverError {
 		font-family: "Ubuntu";

@@ -1,7 +1,16 @@
  
+document.write ('<link href="http://fargo.io/code/ubuntuFont.css" rel="stylesheet" type="text/css">');
+document.write ('<script src="http://fargo.io/code/node/shared/utils.js" async></script>');
+document.write ('<script src="http://api.nodestorage.io/api.js" async></script>');
+document.write ('<script src="http://fargo.io/code/shared/emojify.js" async></script>');
+document.write ('<script src="http://fargo.io/cms/dateFormat.js" async></script>');
+document.write ('<link rel="stylesheet" href="http://fargo.io/code/fontAwesome/css/font-awesome.min.css"/>');
+document.write ('<link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">');
+document.write ('<script src="http://fargo.io/code/browsers/outlinebrowser.js" async></script>'); //6/18/15 by DW
+document.write ('<link href="http://fargo.io/code/browsers/riverbrowser.css" rel="stylesheet" type="text/css">');
 
 var riverBrowserData = {
-	version: "0.5.0",
+	version: "0.4.7",
 	enclosureIconHtml: "<i class=\"fa fa-headphones\"></i>",
 	flEnclosureIcon: true,
 	flShareIcon: true,
@@ -27,6 +36,10 @@ var riverBrowserData = {
 		},
 	openWindowCallback: function (url) { //4/3/17 by DW
 		window.open (url);
+		},
+	getFaviconCallback: function (feed) { //7/8/17 by DW
+		var favicon = "<img class=\"imgFavIcon\" src=\"" + getFavicon (feed.websiteUrl) + "\" width=\"16\" height=\"16\">";
+		return (favicon);
 		}
 	};
 
@@ -204,6 +217,10 @@ function getItemFooter (item) { //9/22/14 by DW
 	var itemfooter = "<span class=\"spTimeDifference\">" + timediff + "</span>" + enclosurelink + sharelink;
 	return ("<div class=\"divItemFooter\">" + riverBrowserData.getExtraFooterCallback (item, itemfooter) + "</div>");
 	}
+function getItemPermalink (item) { //6/15/17 by DW
+	var title = "Direct link to this item.";
+	return ("<span class=\"spRiverPermaLink\"><a href=\"" + item.link + "\" title=\"" + title + "\">#</a></span>");
+	 }
 function expandableTweetTextLink (theText, idTweet, idLevel) {
 	return ("<a class=\"aOutlineTextLink\" onclick=\"ecTweet (" + idLevel + ", '" + idTweet + "')\">" + theText + "</a>");
 	}
@@ -264,22 +281,105 @@ function riverRenderTypedOutline (outline, urlPermalink, permalinkString, flExpa
 	itemhtml = emojiProcess (itemhtml); //11/4/14 by DW
 	return (itemhtml);
 	}
-
 function createRiverLink (url, linktext, title) { //12/17/15 by DW
 	return (riverBrowserData.createLinkCallback (url, linktext, title));
 	}
-
+function renderThroughOutlineBrowser (item) {
+	if (item.outline === undefined) {
+		return (false);
+		}
+	if (item.outline.type === undefined) {
+		return (false);
+		}
+	if (item.outline.subs === undefined) {
+		return (false);
+		}
+	return (true);
+	}
+function renderRiveritem (item, serialnum) { 
+	var itemhtml = "", title, body, itemlink, sharelink, idItem = "idItem" + serialnum, enclosurelink = "";
+	if (renderThroughOutlineBrowser (item)) {
+		switch (item.outline.type) {
+			case "tweet":
+				var flTweetCollapsed = true, style = "";
+				if (flTweetCollapsed) {
+					style = " style=\"display: none;\"";
+					}
+				var tweetlinetext = getIconForTweet (outlineBrowserData.serialNum, item.outline.tweetid, flTweetCollapsed) + expandableTweetTextLink (item.outline.text, item.outline.tweetid, outlineBrowserData.serialNum);
+				var tweethead = "<div class=\"divRenderedOutline\"><div class=\"divItemHeader divOutlineHead\">" + tweetlinetext  + "</div></div>";
+				var idDiv = "idOutlineLevel" + outlineBrowserData.serialNum++, idTweet = item.outline.tweetid;
+				var tweetbody = "<div class=\"divTweetInRiver\" id=\"" + idDiv + "\"" + style + ">&lt;tweet id=" + idTweet + "></div>";
+				itemhtml = tweethead + tweetbody + getItemFooter (item);
+				break;
+			case "image":
+				var imagelinetext = getIconForImage (outlineBrowserData.serialNum, true) + expandableImageTextLink (item.outline.text, outlineBrowserData.serialNum);
+				var style = " style=\"display: none;\"";
+				var imagehead = "<div class=\"divRenderedOutline\"><div class=\"divItemHeader divOutlineHead\">" + imagelinetext  + "</div></div>";
+				var idDiv = "idOutlineLevel" + outlineBrowserData.serialNum++, idTweet = item.outline.tweetid;
+				var imagebody = "<div class=\"divImageInRiver\" id=\"" + idDiv + "\"" + style + "><img class=\"divRenderedImage\" src=\"" + item.outline.url + "\"></div>";
+				itemhtml = imagehead + imagebody + getItemFooter (item);
+				break;
+			case "outline":
+				var flMarkdown = true;
+				if (item.outline.flMarkdown != undefined) {
+					flMarkdown = getBoolean (item.outline.flMarkdown);
+					}
+				else {
+					if (item.outline.flmarkdown != undefined) {
+						flMarkdown = getBoolean (item.outline.flmarkdown);
+						}
+					}
+				itemhtml = getItemPermalink (item) + riverRenderOutline (item.outline, flMarkdown) + getItemFooter (item);
+				break;
+			default:
+				itemhtml = riverRenderOutline (item.outline, true) + getItemFooter (item);  //11/3/14 by DW
+				break;
+			}
+		}
+	else {
+		//set title, body
+			if (item.title.length > 0) {
+				title = item.title;
+				body = item.body;
+				}
+			else {
+				title = item.body;
+				body = "";
+				}
+		//set itemlink
+			if (item.link.length > 0) {
+				itemlink = createRiverLink (item.link, title, undefined); //"<a href=\"" + item.link + "\">" + title + "</a>";
+				}
+			else {
+				itemlink = title;
+				}
+			itemlink =  "<div class=\"divItemHeader\">" + itemlink + "</div>";
+		
+		var itembody = "<div class=\"divItemDescription\">" + body + "</div>";
+		itemhtml = itemlink + itembody + getItemFooter (item);
+		}
+	return ("<div class=\"divItem\" id=\"" + idItem + "\">" + itemhtml + "</div>");
+	}
 function freshRiverDisplay (idRiver) {
 	var feeds = riverBrowserData.theRiver.updatedFeeds.updatedFeed, idSerialNum = 0;
 	$("#" + idRiver).empty ();
 	for (var i = 0; i < feeds.length; i++) {
-		var feed = feeds [i], feedLink, whenFeedUpdated, favicon = "", items = "";
+		var feed = feeds [i], feedLink, whenFeedUpdated, favicon = "", items = "", linksSeen = new Object ();
 		if (riverBrowserData.includeFeedInRiverCallback (feed)) {
+			function linkNotSeen (link) { //10/27/17 by DW
+				if (link === undefined) {
+					return (true);
+					}
+				else {
+					return (linksSeen [item.link] === undefined);
+					}
+				}
+			
 			//set feedLink
 				feedLink = feed.feedTitle;
 				if ((feed.websiteUrl != null) && (feed.websiteUrl.length > 0)) {
 					feedLink = createRiverLink (feed.websiteUrl, feedLink, "Web page"); //"<a href=\"" + feed.websiteUrl + "\" title=\"Web page\">" + feedLink + "</a>";
-					favicon = "<img class=\"imgFavIcon\" src=\"" + getFavicon (feed.websiteUrl) + "\" width=\"16\" height=\"16\">";
+					favicon = riverBrowserData.getFaviconCallback (feed); //7/8/17 by DW
 					}
 				if (feed.feedUrl.length > 0) {
 					feedLink += " (" + createRiverLink (feed.feedUrl, "Feed", "Link to RSS feed") + ")"; //" (<a href=\"" + feed.feedUrl + "\" title=\"Link to RSS feed\">Feed</a>)";
@@ -289,72 +389,15 @@ function freshRiverDisplay (idRiver) {
 			//set items
 				for (var j = 0; j < feed.item.length; j++) {
 					var item = feed.item [j], title, body, itemlink, itemhtml, sharelink, idItem = "idItem" + idSerialNum++, enclosurelink = "";
-					if (riverBrowserData.includeItemInRiverCallback (item)) {
-						if (j > 0) {
-							items += "<div class=\"divInterItemSpacer\"></div>";
-							}
-						if ((item.outline !== undefined) && (item.outline.type !== undefined)) { //6/13/17 by DW -- check for type being undefined
-							switch (item.outline.type) {
-								case "tweet":
-									var flTweetCollapsed = true, style = "";
-									if (flTweetCollapsed) {
-										style = " style=\"display: none;\"";
-										}
-									var tweetlinetext = getIconForTweet (outlineBrowserData.serialNum, item.outline.tweetid, flTweetCollapsed) + expandableTweetTextLink (item.outline.text, item.outline.tweetid, outlineBrowserData.serialNum);
-									var tweethead = "<div class=\"divRenderedOutline\"><div class=\"divItemHeader divOutlineHead\">" + tweetlinetext  + "</div></div>";
-									var idDiv = "idOutlineLevel" + outlineBrowserData.serialNum++, idTweet = item.outline.tweetid;
-									var tweetbody = "<div class=\"divTweetInRiver\" id=\"" + idDiv + "\"" + style + ">&lt;tweet id=" + idTweet + "></div>";
-									itemhtml = tweethead + tweetbody + getItemFooter (item);
-									break;
-								case "image":
-									var imagelinetext = getIconForImage (outlineBrowserData.serialNum, true) + expandableImageTextLink (item.outline.text, outlineBrowserData.serialNum);
-									var style = " style=\"display: none;\"";
-									var imagehead = "<div class=\"divRenderedOutline\"><div class=\"divItemHeader divOutlineHead\">" + imagelinetext  + "</div></div>";
-									var idDiv = "idOutlineLevel" + outlineBrowserData.serialNum++, idTweet = item.outline.tweetid;
-									var imagebody = "<div class=\"divImageInRiver\" id=\"" + idDiv + "\"" + style + "><img class=\"divRenderedImage\" src=\"" + item.outline.url + "\"></div>";
-									itemhtml = imagehead + imagebody + getItemFooter (item);
-									break;
-								case "outline":
-									var flMarkdown = true;
-									if (item.outline.flMarkdown != undefined) {
-										flMarkdown = getBoolean (item.outline.flMarkdown);
-										}
-									else {
-										if (item.outline.flmarkdown != undefined) {
-											flMarkdown = getBoolean (item.outline.flmarkdown);
-											}
-										}
-									itemhtml = riverRenderOutline (item.outline, flMarkdown) + getItemFooter (item);
-									break;
-								default:
-									itemhtml = riverRenderOutline (item.outline, true) + getItemFooter (item);  //11/3/14 by DW
-									break;
+					if (linkNotSeen (item.link)) { //10/27/17 by DW
+						if (riverBrowserData.includeItemInRiverCallback (item)) {
+							if (j > 0) {
+								items += "<div class=\"divInterItemSpacer\"></div>";
 								}
+							var itemhtml = renderRiveritem (item, idSerialNum++);
+							items += itemhtml;
+							linksSeen [item.link] = true; //10/27/17 by DW
 							}
-						else {
-							//set title, body
-								if (item.title.length > 0) {
-									title = item.title;
-									body = item.body;
-									}
-								else {
-									title = item.body;
-									body = "";
-									}
-							//set itemlink
-								if (item.link.length > 0) {
-									itemlink = createRiverLink (item.link, title, undefined); //"<a href=\"" + item.link + "\">" + title + "</a>";
-									}
-								else {
-									itemlink = title;
-									}
-								itemlink =  "<div class=\"divItemHeader\">" + itemlink + "</div>";
-							
-							var itembody = "<div class=\"divItemDescription\">" + body + "</div>";
-							itemhtml = itemlink + itembody + getItemFooter (item);
-							}
-						
-						items += "<div class=\"divItem\" id=\"" + idItem + "\">" + itemhtml + "</div>";
 						}
 					}
 				items = emojiProcess (items); //10/11/14 by DW
