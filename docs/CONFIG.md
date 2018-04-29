@@ -10,7 +10,7 @@ If false, River5 will stop reading feeds and adding new items to rivers.
 
 ##### "httpPort": 1337,
 
-##### "httpUserAgent": "River5,
+##### "httpUserAgent": "River5",
 
 ##### "flHttpEnabled": true,
 
