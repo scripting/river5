@@ -6,8 +6,8 @@
 		<script src="//cdn.jsdelivr.net/npm/river5/includes/basicincludes2/jquery-1.9.1.min.js"></script>
 <link href="//cdn.jsdelivr.net/npm/river5/includes/basicincludes2/bootstrap.css" rel="stylesheet">
 <script src="//cdn.jsdelivr.net/npm/river5/includes/basicincludes2/bootstrap.min.js"></script>
-<link rel="stylesheet" href="http://fargo.io/code/fontAwesome/css/font-awesome.min.css">
-<link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700,700i" rel="stylesheet">
+<link rel="stylesheet" href="//s3.amazonaws.com/fargo.io/code/fontAwesome/css/font-awesome.min.css">
+<link href="//fonts.googleapis.com/css?family=Ubuntu:400,700,700i" rel="stylesheet">
 <link href="//fonts.googleapis.com/css?family=Rancho" rel="stylesheet">
 <script src="//cdn.jsdelivr.net/npm/river5/includes/basicincludes2/utils.js"></script>
 <script src="//cdn.jsdelivr.net/npm/river5/includes/basicincludes2/alertdialog.js"></script>
@@ -20,8 +20,7 @@
 <link href="//cdn.jsdelivr.net/npm/river5/includes/basicincludes2/menus.css" rel="stylesheet" type="text/css">
 <link href="//cdn.jsdelivr.net/npm/river5/includes/basicincludes2/app.css" rel="stylesheet" type="text/css">
 <script src="//cdn.jsdelivr.net/npm/river5/includes/basicincludes2/appprefs.js?x=2"></script>
-<script src="//cdn.jsdelivr.net/npm/river5/includes/basicincludes2/jBeep.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/river5/includes/basicincludes2/beep.js"></script>
+<script src="//s3.amazonaws.com/fargo.io/code/shared/beep.js"></script>
 
 		<script src="//cdn.jsdelivr.net/npm/river5/includes/riverBrowserIncludes/api.js"></script>
 <script src="//cdn.jsdelivr.net/npm/river5/includes/riverBrowserIncludes/emojify2.js"></script>
@@ -29,8 +28,8 @@
 <script src="//cdn.jsdelivr.net/npm/river5/includes/riverBrowserIncludes/markdownConverter.js"></script>
 <script src="//cdn.jsdelivr.net/npm/river5/includes/riverBrowserIncludes/dateFormat.js"></script>
 <script src="//cdn.jsdelivr.net/npm/river5/includes/riverBrowserIncludes/outlinebrowser.js"></script>
-<link href="//cdn.jsdelivr.net/npm/river5/includes/riverBrowserIncludes/riverbrowser.css" rel="stylesheet" type="text/css">
-<script src="//cdn.jsdelivr.net/npm/river5/includes/riverBrowserIncludes/riverbrowser.js"></script>
+<link href="//s3.amazonaws.com/fargo.io/code/browsers/riverbrowser.css" rel="stylesheet" type="text/css">
+<script src="//s3.amazonaws.com/fargo.io/code/browsers/riverbrowser.js"></script>
 
 		<script>
 			var appConsts = {
@@ -171,8 +170,10 @@
 				return (s.charAt (0).toUpperCase () + s.slice (1));
 				}
 			function everySecond () {
-				if (mySocket === undefined) { //try to open the connection
-					webSocketClient ("hello world");
+				if (serverConfig.flWebSocketEnabled) { //don't try to connect if server isn't supporting -- 4/25/18 by DW
+					if (mySocket === undefined) { //try to open the connection
+						webSocketClient ("hello world");
+						}
 					}
 				}
 			function startup () {

@@ -10,9 +10,11 @@ If false, River5 will stop reading feeds and adding new items to rivers.
 
 ##### "httpPort": 1337,
 
+##### "httpUserAgent": "River5,
+
 ##### "flHttpEnabled": true,
 
-River5 has a built-in web server. It's needed for the home page which displays the rivers. If you have another way to view rivers, and want to keep your server from being accessed over the web you can turn this feature off.
+River5 has a built-in web server. It's needed for the home page which displays the rivers. If you have another way to view rivers, and want to keep your server from being accessed over the web you can turn this feature off. You can also control the User-Agent header by changing the value of httpUserAgent.
 
 ##### "webSocketPort": 1338,
 
